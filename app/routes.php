@@ -12,3 +12,9 @@
 */
 
 Route::get('/', array('as' => 'index', 'uses' => 'AppController@showIndex'));
+
+
+
+// Debug Routes
+Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
+Route::get('/mailer/template', array('as' => 'mailer-template', 'uses' => 'MailerController@makeTemplate'));
