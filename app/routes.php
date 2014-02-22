@@ -12,7 +12,7 @@
 */
 
 Route::get('/', array('as' => 'index', 'uses' => 'AppController@showIndex'));
-
+Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
 
 
 // Debug Routes

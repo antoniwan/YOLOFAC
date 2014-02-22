@@ -1,1 +1,6 @@
-@import "settings";
+@import "../../content/bower_components/foundation/scss/foundation";
+@import "../../content/bower_components/scut/dist/scut";
+
+// Modules
+@import "modules/general";
+@import "modules/buttons";

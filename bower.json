@@ -1,8 +1,10 @@
 {
-    "name": "lightsaber",
-    "version": "3.0.0",
-    "dependencies": {
-        "foundation": "~5.0.3"
-    },
-    "devDependencies": {}
+  "name": "YOLOFAC",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation": "~5.0.3"
+  },
+  "devDependencies": {
+    "scut": "~0.9.1"
+  }
 }
