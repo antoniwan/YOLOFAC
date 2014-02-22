@@ -44,6 +44,7 @@
         @show
     </head>
     <body data-base="{{ url() }}" data-assets="{{ asset('') }}" data-route="{{ Route::current()->getName() }}">
+        @include('partials.header')
 
         @yield('content')
 
