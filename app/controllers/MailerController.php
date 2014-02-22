@@ -10,7 +10,18 @@ class MailerController extends BaseController {
 	public function index()
 	{
 		// Controller for debugging Mailer functionalities
-		return 'hi';
+		echo 'send-grid, oh behave!';
+
+		Mail::send('emails.welcome', array('name' => 'Juanito'), function($message)
+		{
+			$message
+				->to('antonio@nobox.com', 'Antonio Rodríguez')
+				->subject('#YOLO for a Cause welcomes you!');
+
+			return 'mail sent';
+		});
+
+
 
 	}
 
