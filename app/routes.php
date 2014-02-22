@@ -42,6 +42,20 @@ Route::group(array('prefix' => 'dare'), function(){
 });
 
 
+/*
+|--------------------------------------------------------------------------
+| Charity Routes
+|--------------------------------------------------------------------------
+|
+| Here are all the routes that have to do with creating, seeing and modifying charities.
+|
+*/
+Route::group(array('prefix' => 'charities'), function(){
+
+});
+
+
+
 // Debug Routes
 
 Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
