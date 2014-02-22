@@ -51,7 +51,7 @@ Route::group(array('prefix' => 'dare'), function(){
 |
 */
 Route::group(array('prefix' => 'charities'), function(){
-
+	Route::get('/', 'CharityController@showIndex');
 });
 
 
