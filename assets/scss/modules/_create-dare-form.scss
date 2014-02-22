@@ -1,0 +1,41 @@
+/**
+ * Create dare form
+ */
+
+.create-dare-form {
+
+}
+
+.create-dare-form__mathsymbol {
+    color: #ccc;
+    font-size: rem-calc(36px);
+    line-height: 1.4;
+}
+
+.create-dare-form__headline {
+    @extend %zeta;
+
+    small {
+        @extend %zeta;
+        float: right;
+        line-height: 1.3;
+    }
+}
+
+.create-dare-form__media-divider {
+    position: relative;
+    margin: rem-calc(30px 0);
+    border-top: 1px solid #ccc;
+    line-height: 0;
+
+    span {
+        display: block;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 250px;
+        font-size: rem-calc(14px);
+        line-height: rem-calc(25px);
+        text-align: center;
+        @include scut-center-absolutely(rem-calc(25px 25px));
+    }
+}

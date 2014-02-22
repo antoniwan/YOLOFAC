@@ -6,6 +6,6 @@ class DareController extends BaseController {
 
     public function showDareCreate()
     {
-    	echo "let's create dares";
+        $this->layout->content = View::make('dare.create', $this->data);
     }
 }

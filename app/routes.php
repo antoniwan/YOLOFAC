@@ -26,7 +26,6 @@ Route::get('/signin', array('as' => 'register', 'uses' => 'AppController@showReg
 Route::get('logout', function() {
 	Auth::logout();
 	return Redirect::to('/');
-
 });
 
 /*

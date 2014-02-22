@@ -1,0 +1,35 @@
+/**
+ * Type
+ */
+
+/* Helpers */
+.text-uppercase { text-transform: uppercase }
+.text-lowercase { text-transform: none }
+
+.font-light { font-weight: lighter }
+.font-bold { font-weight: bold }
+
+/* Standard font sizes */
+%alpha, .alpha   { font-size: $h1-font-size - rem-calc(10); }
+%beta, .beta    { font-size: $h2-font-size - rem-calc(10); }
+%gamma, .gamma   { font-size: $h3-font-size - rem-calc(5); }
+%delta, .delta   { font-size: $h4-font-size - rem-calc(5); }
+%epsilon, .epsilon { font-size: $h5-font-size; }
+%zeta, .zeta    { font-size: $h6-font-size; }
+
+@media #{$medium} {
+    %alpha, .alpha   { font-size: $h1-font-size; }
+    %beta, .beta    { font-size: $h2-font-size; }
+    %gamma, .gamma   { font-size: $h3-font-size; }
+    %delta, .delta   { font-size: $h4-font-size; }
+    %epsilon, .epsilon { font-size: $h5-font-size; }
+    %zeta, .zeta    { font-size: $h6-font-size; }
+}
+
+/* Smaller font sizes */
+%milli, .milli {
+    font-size: rem-calc(14px);
+}
+%nano, .nano {
+    font-size: rem-calc(12px);
+}

@@ -1,0 +1,10 @@
+/**
+ * Form elements
+ */
+
+// Big input elements in some page forms
+.big[type="text"] {
+    padding: rem-calc(26px);
+    font-size: rem-calc(32px);
+    text-align: center;
+}
