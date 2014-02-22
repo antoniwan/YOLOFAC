@@ -51,15 +51,6 @@
                     <div class="text-center milli">
                         You can insert links to videos from YouTube, Vine or Instragram.
                     </div>
-                </fieldset>
-
-                <fieldset>
-                    <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>
-
-                    {{ Form::text('media-input', null, array('placeholder' => 'Insert a video example&hellip;')) }}
-                    <div class="text-center milli">
-                        You can insert links to videos from YouTube, Vine or Instragram.
-                    </div>
 
                     <div class="create-dare-form__media-divider">
                         <span>or</span>
