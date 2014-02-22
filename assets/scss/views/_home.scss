@@ -2,3 +2,35 @@
  * View: Home
  */
 
+#homepage-hero {
+	height: 350px;
+	position: relative;
+	.overlay, img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 350px;
+		width: auto;
+		height: 350px;
+	}
+	.overlay {
+		background: rgba(239, 239, 239, 0.8);
+		background-size: cover;
+	}
+	img {
+		z-index: -100;
+		background: url('../img/index/hero.gif') no-repeat;
+		background-size: cover;
+	}
+
+	.row {
+		position: relative;
+		h2 {
+			bottom: 20px;
+			left: 20px;
+			display: block;
+			float: left;
+		}
+	}
+}
