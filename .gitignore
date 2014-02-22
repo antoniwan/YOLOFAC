@@ -1,0 +1,31 @@
+# Laravel
+/app/config/local/database.php
+/bootstrap/compiled.php
+/vendor
+
+# OS
+.DS_Store
+.idea/
+
+# Packages
+_ide_helpers.php
+
+# Sublime
+*.sublime-workspace
+
+# Gulp
+dist
+
+# NPM
+node_modules
+
+# Bower
+components
+bower_components
+
+# SASS
+.sass-cache
+/content/css/*.css
+/content/css/*.css.map
+
+/content/js/*.js

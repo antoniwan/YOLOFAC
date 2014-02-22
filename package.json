@@ -1,0 +1,76 @@
+{
+  "name": "lightsaber",
+  "version": "3.0.0",
+  "description": "An elegant weapon, for a more civilized age.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Nobox/lightsaber.git"
+  },
+  "keywords": [
+    "laravel",
+    "php",
+    "gulp",
+    "sass",
+    "coffee-script",
+    "browserify"
+  ],
+  "author": "Nobox Development <developers@nobox.com>",
+  "contributors": [
+    {
+      "name": "Alberto Estrada",
+      "email": "alberto@nobox.com"
+    },
+    {
+      "name": "Antonio Rodriguez",
+      "email": "antonio@nobox.com"
+    },
+    {
+      "name": "Javier Velazquez",
+      "email": "javier@nobox.com"
+    },
+    {
+      "name": "Jonathan Torres",
+      "email": "jonathan@nobox.com"
+    },
+    {
+      "name": "Nizar Khalife",
+      "email": "nizar@nobox.com"
+    },
+    {
+      "name": "Waldemar Figueroa",
+      "email": "waldemar@nobox.com"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-util": "~2.2.9",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.0",
+    "gulp-browserify": "~0.4.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-modernizr": "git://github.com/doctyper/gulp-modernizr",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-clean": "~0.2.4",
+    "gulp-sass": "~0.6.0",
+    "gulp-csso": "~0.2.3",
+    "gulp-svgmin": "~0.4.1",
+    "gulp-coffeelint": "~0.2.0",
+    "coffeeify": "~0.6.0",
+    "coffee-script": "~1.7.1",
+    "browserify": "~3.24.10",
+    "browserify-shim": "~3.2.2",
+    "jquery": "~1.11.0",
+    "scut": "git://github.com/davidtheclark/scut",
+    "browser-sync": "~0.5.3",
+    "map-stream": "~0.1.0",
+    "shelljs": "~0.2.6"
+  },
+  "browser": {
+    "jquery": "jquery/dist/jquery",
+    "facebook": "http://connect.facebook.net/en_US/all"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  }
+}

@@ -1,0 +1,55 @@
+//
+// Rem to Pixels
+//
+
+$old-ie: false !default;
+$rem-base: 16 !default;
+
+// Returns a number from a string
+//
+// @param  {string} $n Number with unit, 100px
+// @return {number}    Number without unit, 100
+
+@function strip-unit($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+// Converts a px value or an array of values into rem
+//
+// @param  {list}   $value      values to be converted, 10px 5px 0
+// @param  {number} $base-value base font-size which rems will base on, 16px
+// @return {list}               rem value equivalents
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+    @return $value;
+}
+
+// Converts array of values with units
+// depending on 'pixels only' mode. If true, will return list
+// of values in pixels, else they will be converted to rem.
+//
+// @param  {list}   $values     list of values (10px 5px 25px 0)
+// @param  {number} $base-value base font-size which rems will base on, 16
+// @return {list}               list of same values with requested units
+
+@function rem($values, $base-value: $rem-base) {
+    @if $old-ie {
+        @return $values;
+    }
+    @else {
+        $max: length($values);
+
+        @if $max == 1 {
+            @return convert-to-rem(nth($values, 1), $base-value);
+        }
+
+        $remValues: ();
+        @for $i from 1 through $max {
+            $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+        }
+        @return $remValues;
+    }
+}
+
