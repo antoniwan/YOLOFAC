@@ -41,4 +41,19 @@ class AppController extends BaseController {
 			return Redirect::to('/user');
 	}
 
+	public function twilioTest()
+	{
+		// testing the twilio API
+		$sid = Config::get('twilio.sid');
+		$token = Config::get('twilio.token');
+		$twilio_number = Config::get('twilio.phone_number');
+		$client = new Services_Twilio($sid, $token);
+		$message = $client->account->messages->sendMessage(
+			$twilio_number,
+			'3055884688',
+			'This is a test!'
+		);
+		return 'twilio sms sent!';
+	}
+
 }
