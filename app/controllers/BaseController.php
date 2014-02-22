@@ -14,7 +14,7 @@ class BaseController extends Controller {
         if (!is_null($this->layout))
         {
             # Metadata used on all views
-            $this->data['locale'] = Config::get('app.locale');
+            $this->data['locale'] = 'en';
             $this->data['environment'] = App::environment();
 
             $this->layout = View::make($this->layout, $this->data);
