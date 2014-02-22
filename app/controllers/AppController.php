@@ -28,7 +28,9 @@ class AppController extends BaseController {
 		if(!Auth::check())
 			return Redirect::to('/register');
 
+		echo "<pre>";
 		var_dump(Auth::user());
+		echo "</pre>";
 	}
 
 	public function oauth()
