@@ -3,15 +3,55 @@
  */
 
 .button {
-    @include button;
+
 }
 
 %btn-social {
+    position: relative;
     @include button;
+
+    &:before {
+        width: rem-calc(50px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 50%;
+        border-right: 1px solid rgba(0,0,0,.15);
+        content: '';
+        @include scut-absolute(0 n 0 0);
+    }
 }
 
 .btn-social--facebook {
     @extend %btn-social;
+    background-color: #507cbe;
+    &:before {
+        background-image: url('../svg/social/icon-facebook.svg');
+    }
+    &:hover {
+        background-color: darken(#507cbe, 10%);
+    }
+}
+
+.btn-social--twitter {
+    @extend %btn-social;
+    background-color: #63cdf1;
+    &:before {
+        background-image: url('../svg/social/icon-twitter.svg');
+    }
+    &:hover {
+        background-color: darken(#63cdf1, 10%);
+    }
+}
+
+.btn-social--google {
+    @extend %btn-social;
+    background-color: #df4a32;
+    &:before {
+        background-image: url('../svg/social/icon-google.svg');
+    }
+    &:hover {
+        background-color: darken(#df4a32, 10%);
+    }
 }
 
 .social-btn-group {
