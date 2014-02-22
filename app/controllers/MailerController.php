@@ -24,9 +24,14 @@ class MailerController extends BaseController {
 		return View::make('emails.welcome');
 	}
 
-	public function makeBetPlaced()
+	public function makeDarePlaced()
 	{
 		return View::make('emails.betplaced');
+	}
+
+	public function makeDareOwned()
+	{
+		return View::make('emails.owned');
 	}
 
 
