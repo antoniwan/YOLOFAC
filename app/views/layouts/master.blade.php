@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         @section('title')
-        <title>Lightsaber 1.5</title>
+        <title>#YOLO for a cause</title>
         @show
 
         @section('meta')
@@ -21,13 +21,7 @@
         <link rel="home" href="{{ url() }}">
 
         @section('stylesheets')
-            <!--[if (gt IE 8) | (IEMobile)]><!-->
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-            <!--<![endif]-->
-
-            <!--[if (lt IE 9) & (!IEMobile)]>
-            <link rel="stylesheet" href="{{ asset('css/styles-ie.css') }}">
-            <![endif]-->
         @show
 
         <meta property="og:type" content="website">
@@ -44,6 +38,7 @@
         @show
     </head>
     <body data-base="{{ url() }}" data-assets="{{ asset('') }}" data-route="{{ Route::current()->getName() }}">
+        @include('partials.header')
 
         @yield('content')
 

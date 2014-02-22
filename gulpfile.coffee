@@ -27,7 +27,7 @@ path.dist    = 'dist'
 
 
 # Run our scripts through Browserify
-gulp.task 'browserify', ['coffeelint'], ->
+gulp.task 'browserify', ->
     # Save stream in variable
     stream = gulp.src(["#{path.coffee}/**/main.coffee"], read: false)
         .pipe(plumber())
@@ -42,6 +42,9 @@ gulp.task 'browserify', ['coffeelint'], ->
                         exports: "$"
                     "foundation":
                         path: "#{path.bower}/foundation/js/foundation.js"
+                        exports: null
+                    "foundation.topbar":
+                        path: "#{path.bower}/foundation/js/foundation/foundation.topbar.js"
                         exports: null
             )
         )
