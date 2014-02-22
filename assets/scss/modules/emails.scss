@@ -1,0 +1,41 @@
+/**
+ * Emails
+ */
+
+.html-email-template {
+
+	background: black;
+	color: white;
+
+	.container {
+		width: 800px;
+		box-sizing: content-box;
+		margin: 0 auto;
+		background: white;
+		color: black;
+	}
+
+	p, h1, h2, h3, h4, h5 {
+		margin: 0;
+		padding: 0;
+	}
+
+	header, footer {
+		padding: 30px 20px;
+	}
+	header {
+		border-bottom: 1px solid pink;
+	}
+	footer {
+		border-top: 1px solid pink;
+	}
+
+	#content {
+		padding: 20px;
+
+		strong {
+			display: block;
+			margin: 15px 0;
+		}
+	}
+}
