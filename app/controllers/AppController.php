@@ -11,22 +11,24 @@ class AppController extends BaseController {
 
     public function showRegister()
     {
+
+    	if(Auth::check())
+    		return Redirect::to('user');
+
+
+    	$this->data['service_urls'] = array(
+			'facebook' =>  Service::retrieveLoginUrl('facebook')
+		);
+
         $this->layout->content = View::make('register', $this->data);
     }
 
-	public function test()
+	public function showUserPage()
 	{
+		if(!Auth::check())
+			return Redirect::to('/register');
 
-		if(Auth::check()){
-			var_dump(Auth::user());
-		} else {
-
-			$this->data['service_urls'] = array(
-				'facebook' =>  Service::retrieveLoginUrl('facebook')
-			);
-
-			$this->layout->content = View::make('test.index', $this->data);
-		}
+		var_dump(Auth::user());
 	}
 
 	public function oauth()
@@ -34,7 +36,7 @@ class AppController extends BaseController {
 		$user = Service::serviceCallback();
 
 		if($user && Auth::check())
-			return Redirect::to('test');
+			return Redirect::to('/user');
 	}
 
 }
