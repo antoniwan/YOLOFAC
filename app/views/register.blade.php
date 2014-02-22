@@ -1,15 +1,15 @@
 @extends('layouts.master');
 
 @section('content')
-    <main class="page row">
+    <main class="page">
         <div class="row">
-            <div class="medium-7 large-8 column">
+            <div class="small-12 medium-7 large-8 column">
                 <header>
                     <h1 class="page__title">Sign in to create a #YOLO dare</h1>
                     <p>Register with any of your social networks to start creating your #YOLO Dare and start daring your friends.</p>
                 </header>
 
-                <ul class="social-btn-group list-unstyled small-block-grid-2">
+                <ul class="social-btn-group list-unstyled small-block-grid-1 medium-block-grid-2">
                     <li>
                         <a class="button btn-social--facebook" href="{{ $service_urls['facebook'] }}">Facebook</a>
                     </li>

@@ -54,11 +54,19 @@
     }
 }
 
+// A group of social buttons
 .social-btn-group {
     @extend %scut-clearfix;
 
     .button {
         display: block;
         margin-bottom: 0;
+    }
+
+    @media #{$small-only} {
+        > li {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 }
