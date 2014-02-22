@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "969ffaa63d78fb9da95fec08b8685345",
+    "hash": "0f3cb903b685820d37ad74005130187b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1600,6 +1600,56 @@
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
             "time": "2014-02-03 17:15:33"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "348f5f2e7410735ebec593cc1331962090375ef5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/348f5f2e7410735ebec593cc1331962090375ef5",
+                "reference": "348f5f2e7410735ebec593cc1331962090375ef5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "mockery/mockery": ">=0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Services_Twilio": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Burke",
+                    "email": "kevin@twilio.com"
+                },
+                {
+                    "name": "Kyle Conroy",
+                    "email": "kyle+pear@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "http://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2014-02-20 21:04:05"
         }
     ],
     "packages-dev": [
@@ -1610,7 +1660,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "lusitanian/oauth": 20
+        "lusitanian/oauth": 20,
+        "twilio/sdk": 20
     },
     "platform": [
 
