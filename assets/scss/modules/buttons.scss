@@ -13,3 +13,12 @@
 .btn-social--facebook {
     @extend %btn-social;
 }
+
+.social-btn-group {
+    @extend %scut-clearfix;
+
+    .button {
+        display: block;
+        margin-bottom: 0;
+    }
+}
