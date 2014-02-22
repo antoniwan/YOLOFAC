@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', array('as' => 'home', 'uses' => 'AppController@showIndex'));
-Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
+// Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
 Route::get('/user', array('as' => 'user_page', 'uses' => 'AppController@showUserPage'));
 
 /*
@@ -23,6 +23,7 @@ Route::get('/user', array('as' => 'user_page', 'uses' => 'AppController@showUser
 |
 */
 Route::get('/signin', array('as' => 'register', 'uses' => 'AppController@showRegister'));
+Route::get('oauth', 'AppController@oauth');
 Route::get('logout', function() {
 	Auth::logout();
 	return Redirect::to('/');

@@ -17,7 +17,10 @@ class AppController extends BaseController {
 
 
     	$this->data['service_urls'] = array(
-			'facebook' =>  Service::retrieveLoginUrl('facebook')
+    		'twitter' =>  Service::retrieveLoginUrl('twitter'),
+    		// 'paypal' =>  Service::retrieveLoginUrl('paypal'),
+			'facebook' =>  Service::retrieveLoginUrl('facebook'),
+			'google' =>  Service::retrieveLoginUrl('google')
 		);
 
         $this->layout->content = View::make('register', $this->data);

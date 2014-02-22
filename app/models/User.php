@@ -39,6 +39,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         	$user = new User;
 
         	$user->name = $user_service['user_name'];
+            $user->email = $user_service['user_email'];
         	$user->type = 'regular';
 
         	if($user->save()){
