@@ -16,6 +16,7 @@ class CreateCharitiesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->longText('mission');
 			$table->string('url')->nullable();
 			$table->string('type')->nullable();
 			$table->string('category')->nullable();
