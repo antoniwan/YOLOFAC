@@ -19,34 +19,78 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+
 	/**
-	 * Get the unique identifier for the user.
+	 * Verify if a user with the received service is already inside the database
 	 *
-	 * @return mixed
+	 * @return User
 	 */
-	public function getAuthIdentifier()
+	public static function verifyUserByService($user_service)
 	{
-		return $this->getKey();
+		if(!$user_service)
+            return false;
+
+        $user = User::whereHas('services', function($query) use ($user_service){
+            $query->where('service_id', $user_service['service_id'])->where('service_name', $user_service['service_name']);
+        })->limit(1)->get();
+
+
+        if(!$user = $user->first()) {
+        	$user = new User;
+
+        	$user->name = $user_service['user_name'];
+        	$user->type = 'regular';
+
+        	if($user->save()){
+        		$service = new Service;
+
+	        	$service->service_id = $user_service['service_id'];
+	        	$service->service_name = $user_service['service_name'];
+	        	$service->service_picture = $user_service['service_picture'];
+
+	        	$user->services()->save($service);
+        	}
+        }
+
+    	Auth::login($user);
+
+        return Auth::user();
+
+	}
+
+	public function services()
+	{
+		return $this->hasMany('Service');
 	}
 
 	/**
-	 * Get the password for the user.
-	 *
-	 * @return string
-	 */
-	public function getAuthPassword()
-	{
-		return $this->password;
-	}
+     * Get the unique identifier for the user.
+     *
+     * @return mixed
+     */
+    public function getAuthIdentifier()
+    {
+        return $this->getKey();
+    }
 
-	/**
-	 * Get the e-mail address where password reminders are sent.
-	 *
-	 * @return string
-	 */
-	public function getReminderEmail()
-	{
-		return $this->email;
-	}
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Get the e-mail address where password reminders are sent.
+     *
+     * @return string
+     */
+    public function getReminderEmail()
+    {
+        return $this->email;
+    }
 
 }

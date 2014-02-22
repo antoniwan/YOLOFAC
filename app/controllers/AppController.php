@@ -14,4 +14,27 @@ class AppController extends BaseController {
         $this->layout->content = View::make('register', $this->data);
     }
 
+	public function test()
+	{
+
+		if(Auth::check()){
+			var_dump(Auth::user());
+		} else {
+
+			$this->data['service_urls'] = array(
+				'facebook' =>  Service::retrieveLoginUrl('facebook')
+			);
+
+			$this->layout->content = View::make('test.index', $this->data);
+		}
+	}
+
+	public function oauth()
+	{
+		$user = Service::serviceCallback();
+
+		if($user && Auth::check())
+			return Redirect::to('test');
+	}
+
 }
