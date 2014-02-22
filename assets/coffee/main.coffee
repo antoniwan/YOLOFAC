@@ -1,4 +1,6 @@
 $ = require('jquery')
+require('foundation')
+require('foundation.topbar')
 
 $(document).ready ->
-    console.log('hello world')
+    $(document).foundation()
