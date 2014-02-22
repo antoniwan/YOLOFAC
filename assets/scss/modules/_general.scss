@@ -1,0 +1,8 @@
+/**
+ * General modules
+ */
+
+.list-unstyled {
+    @extend %scut-list-unstyled;
+    margin: 0;
+}

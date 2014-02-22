@@ -1,0 +1,15 @@
+/**
+ * Buttons
+ */
+
+.button {
+    @include button;
+}
+
+%btn-social {
+    @include button;
+}
+
+.btn-social--facebook {
+    @extend %btn-social;
+}
