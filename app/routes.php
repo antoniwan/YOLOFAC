@@ -13,20 +13,19 @@
 Route::get('/', array('as' => 'home', 'uses' => 'AppController@showIndex'));
 Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
 
+Route::get('oauth', 'AppController@oauth');
+
+// Log-out
+Route::get('logout', function() {
+	Auth::logout();
+	return Redirect::to('test');
+});
 
 // Debug Routes
-Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
-Route::get('/mailer/template', array('as' => 'mailer-template', 'uses' => 'MailerController@makeTemplate'));
-Route::get('/', array('as' => 'index', 'uses' => 'AppController@showIndex'));
 
 Route::get('test', 'AppController@test');
 
-Route::get('oauth', 'AppController@oauth');
-
-Route::get('logout', function() {
-
-	Auth::logout();
-
-	return Redirect::to('test');
-
-});
+Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
+Route::get('/mailer/template', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeTemplate'));
+Route::get('/mailer/template/welcome', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeWelcome'));
+Route::get('/mailer/template/bet-placed', array('as' => 'mailer-template-betplaced', 'uses' => 'MailerController@makeBetPlaced'));
