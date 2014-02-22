@@ -38,7 +38,7 @@ gulp.task 'browserify', ->
                 debug: not gulputil.env.production
                 shim:
                     "jquery":
-                        path: "#{path.bower}/jquery/jquery.js"
+                        path: "#{path.bower}/jquery/dist/jquery.js"
                         exports: "$"
                     "foundation":
                         path: "#{path.bower}/foundation/js/foundation.js"

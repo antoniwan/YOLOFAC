@@ -5,6 +5,7 @@
     "foundation": "~5.0.3"
   },
   "devDependencies": {
-    "scut": "~0.9.1"
+    "scut": "~0.9.1",
+    "jquery": "~2.1.0"
   }
 }
