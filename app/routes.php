@@ -43,6 +43,7 @@ Route::group(array('prefix' => 'dare'), function(){
 	Route::get('create', array('before' => 'auth', 'as' => 'dare.create', 'uses' => 'DareController@showDareCreate'));
     Route::post('submit', array('before' => 'auth', 'uses' => 'DareController@submitDare'));
     Route::post('media', 'DareController@media');
+    Route::post('getInstagram', 'DareController@getInstagram');
     Route::get('/show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
     Route::get('/test', 'DareController@test_media');
 });

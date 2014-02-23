@@ -19,23 +19,22 @@
                     <h2>Choose your donation pledge</h2>
 
                     {{ Form::open(array('url' => 'dare/submit', 'class' => 'create-dare-form row')) }}
-
                     <fieldset class="row collapse">
                         <div class="small-2 column">
-                        {{ Form::text('donation_amount', '1', array('class' => 'big')) }}
+                        {{ Form::text('donation_amount', '1', array('class' => 'big js-donation-amount')) }}
                         {{ Form::label('donation_amount', 'Donation Amount', array('class' => 'milli')) }}
                         </div>
                         <div class="small-2 column text-center">
                             <span class="create-dare-form__mathsymbol" aria-label="times">x</span>
                         </div>
                         <div class="small-2 column">
-                        {{ Form::text('donation_quantity', '&infin;', array('class' => 'big')) }}
+                        {{ Form::text('donation_quantity', '&infin;', array('class' => 'big js-donation-quantity')) }}
                         </div>
                         <div class="small-2 column text-center">
                             <span class="create-dare-form__mathsymbol" aria-label="equals">=</span>
                         </div>
                         <div class="small-4 column">
-                        {{ Form::text('donation-total', '?', array('class' => 'big')) }}
+                        {{ Form::text('donation-total', '?', array('class' => 'big js-donation-total')) }}
                         </div>
                     </fieldset>
 
