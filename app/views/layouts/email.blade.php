@@ -12,7 +12,55 @@
         @show
 
         @section('stylesheets')
-            <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+            <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            html, body {
+                background: #EDEFF1;
+                color: #37485D;
+                font-family: "Lato","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            }
+            .container {
+                width: 550px;
+                box-sizing: border-box;
+                margin: 50px auto;
+            }
+            header {
+                padding: 15px 30px;
+                background: #37485D;
+                color: white;
+                border-radius: 10px 10px 0 0;
+            }
+            #content {
+                padding: 15px 30px;
+                background: white;
+                border-radius: 0 0 10px 10px;
+            }
+            footer {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 15px;
+            }
+            h2, h3, h4, h5, h6, p {
+                margin-bottom: 15px;
+            }
+            p {
+            }
+
+            ul {
+                margin: 15px 0;
+                display: block;
+            }
+            ul li {
+                margin: 5px 0;
+                margin-left: 25px;
+            }
+            a {
+                color: #37485D;
+            }
+            </style>
         @show
 
 

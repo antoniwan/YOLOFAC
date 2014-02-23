@@ -6,6 +6,7 @@
 
 @section('content')
     <h2>Hey {{ $name }}, thanks for joining #YOLOFAC</h2>
+    <p>We know you're inclined to take bad decisions, why not do it for a good purpose by pledging to support a local charity every time you or a friend do a crazy stunt.</p>
     <strong>What now?</strong>
     <ul>
         <li><a href="#">Dare your friends</a> into doing something you've ever wanted</li>

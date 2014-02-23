@@ -27,7 +27,7 @@ class MailerController extends BaseController {
 
 	public function makeTemplate()
 	{
-		return View::make('emails.welcome');
+		return View::make('emails.welcome', array('name' => 'Juanito Caradequeso'));
 	}
 
 	public function makeWelcome()
