@@ -11,7 +11,7 @@
                 <div class="small-12 column">
                     <div class="flag flag--bottom flag--no-small">
                         <div class="flag__body">
-                            <h1 class="home__hero-heading">You already do crazy<b>use charity as your excuse</b></h1>
+                            <h1 class="home__hero-heading">You already do crazy,<b>use charity as your excuse!</b></h1>
 
                             <div class="home__hero-cta row collapse">
                                 <div class="small-12 medium-8 column">
