@@ -70,7 +70,7 @@ class DareController extends BaseController {
 
     public function listAll()
     {
-        $dares = Dare::all()->toArray();
+        $dares = Dare::all()->orderBy('created_at', 'DESC')->toArray();
         foreach($dares as $dare)
         {
             $agg_dares[$dare['id']]['id'] = $dare['id'];
@@ -131,7 +131,7 @@ class DareController extends BaseController {
 
     public function makeDares()
     {
-        $this->data['dares'] = Dare::take(8)->orderBy('created_at')->get();
+        $this->data['dares'] = Dare::take(8)->orderBy('created_at', 'DESC')->get();
         $this->layout->content = View::make('dare.all', $this->data);
     }
 }

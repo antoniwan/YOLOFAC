@@ -7,7 +7,7 @@ class AppController extends BaseController {
     public function showIndex()
     {
 
-        $this->data['dares'] = Dare::take(8)->orderBy('created_at')->get();
+        $this->data['dares'] = Dare::take(8)->orderBy('created_at', 'DESC')->get();
 
         $this->data['charities'] = Charity::all();
         $this->layout->content = View::make('index', $this->data);

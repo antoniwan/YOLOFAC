@@ -22,6 +22,7 @@
 
                     @foreach($dares as $dare)
                     <li>
+                        <a href="{{URL::to('/dare/show/' . $dare->id)}}">
                         <article class="dare-widget">
                             @if($dare->medias->count())
                             <figure class="flex-video">
@@ -33,7 +34,14 @@
                             </figure>
                             @endif
 
-                            <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
+                            <p class="dare-widget__desc">I pledge to donate
+                                    <strong>${{ number_format($dare->donation_amount) }}</strong>
+                                    @if($dare->donation_quantity == 1)
+                                    for
+                                    @else
+                                    for each of the first {{ number_format($dare->donation_quantity) }} challengers that
+                                    @endif
+                                    <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong></p>
 
                             <footer class="dare-widget__meta flag flag--inverted nano">
                                 <div class="flag__body">
@@ -45,6 +53,7 @@
                                 </div>
                             </footer>
                         </article>
+                        </a>
                     </li>
                     @endforeach
                 </ul>

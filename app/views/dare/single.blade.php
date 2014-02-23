@@ -50,11 +50,6 @@
                                     @if($dare->responses()->where('accepted', 1)->count())
 
                                     <b>{{$dare->responses()->where('accepted', 1)->count()}}</b>
-                                    <ul class="dare-details__donors">
-                                        @foreach($dare->responses()->where('accepted', 1)->get() as $response)
-                                            <li><img src="//placehold.it/30x30"></li>
-                                        @endforeach
-                                    </ul>
                                     @else
                                         <b>0</b>
                                     @endif
