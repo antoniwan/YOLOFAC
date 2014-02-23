@@ -20,7 +20,7 @@ class AppController extends BaseController {
 
         $this->data['service_urls'] = array(
             'twitter' =>  Service::retrieveLoginUrl('twitter'),
-            // 'paypal' =>  Service::retrieveLoginUrl('paypal'),
+            'paypal' =>  Service::retrieveLoginUrl('paypal'),
             'facebook' =>  Service::retrieveLoginUrl('facebook'),
             'google' =>  Service::retrieveLoginUrl('google')
         );
@@ -46,7 +46,7 @@ class AppController extends BaseController {
             Session::forget('register');
             return Redirect::to('/dare/create');
         } else if($user && Auth::check())
-            return Redirect::to('/');
+            return Redirect::to('/dashboard');
     }
 
     public function twilioTest()
