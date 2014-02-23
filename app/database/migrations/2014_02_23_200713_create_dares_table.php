@@ -16,6 +16,8 @@ class CreateDaresTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('user_id')->unsigned();
+			$table->integer('charity_id')->unsigned();
+
 			$table->string('title');
 			$table->text('excerpt');
 
@@ -26,6 +28,8 @@ class CreateDaresTable extends Migration {
 			$table->timestamps();
 			$table->index('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->index('charity_id');
+            $table->foreign('charity_id')->references('id')->on('charities');
 		});
 	}
 

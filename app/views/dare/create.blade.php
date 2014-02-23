@@ -49,25 +49,14 @@
                             {{ Form::label('donation-total', 'Maximum Donation', array('class' => 'milli')) }}
                             </div>
                         </div>
+                        <?php $charities = array('' => 'Select a charity'); ?>
 
-                        <ul class="dare-charities small-block-grid-4">
-                            <li>
-                                <img class="is-active" src="//placehold.it/50x50" alt="">
-                                <span class="dare-charities__charity-name milli">National Sierra Club</span>
-                            </li>
-                            <li>
-                                <img src="//placehold.it/50x50" alt="">
-                                <span class="dare-charities__charity-name milli">Boys &amp; Girls Club</span>
-                            </li>
-                            <li>
-                                <img src="//placehold.it/50x50" alt="">
-                                <span class="dare-charities__charity-name milli">Take Stock in Children</span>
-                            </li>
-                            <li>
-                                <img src="//placehold.it/50x50" alt="">
-                                <span class="dare-charities__charity-name milli">Big Brothers of Miami</span>
-                            </li>
-                        <ul>
+                        @foreach(Charity::all() as $charity)
+                            <?php $charities[$charity->id] = $charity->name; ?>
+                        @endforeach
+
+
+                        {{ Form::select('charity', $charities) }}
                     </fieldset>
 
                     <fieldset>
