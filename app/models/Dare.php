@@ -70,4 +70,9 @@ class Dare extends Eloquent {
         return $this->hasMany('Payment');
     }
 
+    public function responses()
+    {
+        return $this->hasMany('YoloResponse');
+    }
+
 }

@@ -6,6 +6,24 @@ require('foundation.reveal')
 require('jquery.ui.widget')
 require('blueimp.fileupload')
 
+base_url = $('body').data('base')
+
+
+getEmbeddedData = (media_url) ->
+
+    embedded = null
+
+    if(media_url.indexOf('youtube.com') != -1)
+        regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+        match = media_url.match(regExp)
+
+        if(match && match[2].length == 11)
+            embedded = '<div class="flex-video"><iframe src="//www.youtube.com/embed/' + match[2] + '" frameborder="0" allowfullscreen></iframe></div>'
+
+
+    return embedded
+
+
 ###
  Class Dare
 ###
@@ -14,21 +32,6 @@ class Dare
     init: ->
         stickyPrev()
         @submitEvents()
-
-    getEmbeddedData: (media_url) ->
-
-        embedded = null
-
-        if(media_url.indexOf('youtube.com') != -1)
-            regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
-            match = media_url.match(regExp)
-
-            if(match && match[2].length == 11)
-                embedded = '<iframe width="560" height="315" src="//www.youtube.com/embed/' + match[2] + '" frameborder="0" allowfullscreen></iframe>'
-
-
-        return embedded
-
 
 
     submitEvents: ->
@@ -86,13 +89,45 @@ class Dare
             $media_url = $('.js-media-url').val()
 
             if($media_url != '')
-                embedded = @getEmbeddedData($media_url)
+                embedded = getEmbeddedData($media_url)
                 $('.create-date-form__media-submit').hide()
                 $('.media-submission-upload').hide()
                 $('.create-dare-form__media-preview').show().find('.create-dare-form__media-preview-container').html(embedded)
 
         )
 ### End Dare Class ###
+
+class Response
+    init: ->
+        @modalEvents()
+
+    modalEvents: ->
+        $('.js-insert-response-video').on('click', (e) ->
+            e.preventDefault()
+            $media_url = $('.js-insert-response-video-url').val()
+
+            if($media_url != '')
+                embedded = getEmbeddedData($media_url)
+                $('.js-response-video-preview').html(embedded).show();
+                $('.js-response-video-form').hide();
+        )
+
+        $('.js-reponse-submit').on('click', (e) ->
+            e.preventDefault()
+
+            $.ajax base_url + '/response/submit',
+                type: 'POST'
+                dataType: 'json'
+                data :
+                    video_url : $('.js-insert-response-video-url').val()
+                    comments : $('.js-response-comments').val()
+                    dare_id : $('#challenge-email').data('dareid')
+                error: (response) ->
+                    console.log(response)
+                success: (response) ->
+                    if(response)
+                        $('#modal-dare-post').foundation('reveal', 'close')
+        )
 
 
 class Challenge
@@ -198,5 +233,7 @@ $(document).ready ->
 
     dare = new Dare()
     challenge = new Challenge()
+    response = new Response()
     dare.init()
     challenge.init()
+    response.init()

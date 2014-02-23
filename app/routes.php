@@ -85,6 +85,18 @@ Route::group(array('prefix' => 'payment'), function(){
 
 /*
 |--------------------------------------------------------------------------
+| Response Routes
+|--------------------------------------------------------------------------
+|
+| Here are all the routes that have to do with payments
+|
+*/
+Route::group(array('prefix' => 'response'), function(){
+	Route::post('/submit', 'ResponseController@submit');
+});
+
+/*
+|--------------------------------------------------------------------------
 | Charity Routes
 |--------------------------------------------------------------------------
 |

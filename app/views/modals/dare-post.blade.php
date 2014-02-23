@@ -6,14 +6,20 @@
     <div class="modal__content">
         <div class="modal__row row">
             <div class="small-12 column">
-                <textarea rows="10" placeholder="Insert your comment, lets us know what made you accept the challenge"></textarea>
+                <textarea class="js-response-comments" rows="10" placeholder="Insert your comment, lets us know what made you accept the challenge"></textarea>
             </div>
         </div>
         <div class="modal__row row">
             <div class="small-12 column">
                 <label class="modal__title" for="dare-post-video">Insert your challenge video</label>
-                <input type="text" placeholder="Insert a video example&hellip;">
-                <div class="dare-post__video-note milli text-center">You can insert links to videos from YouTube, Vine or Instagram</div>
+                <div class="js-response-video-preview" style="display:none;">
+
+                </div>
+                <div class="js-response-video-form">
+                    <input class="js-insert-response-video-url" type="text" placeholder="Insert a video example&hellip;">
+                    <div class="dare-post__video-note milli text-center">You can insert links to videos from YouTube.</div>
+                    <a class="button radius small js-insert-response-video" href="#">Insert</a>
+                </div>
             </div>
         </div>
         <div class="dare-post__donation modal__row row">
@@ -28,7 +34,7 @@
         </div>
         <div class="row">
             <div class="small-12 column">
-                <a class="button radius expand" href="#">Post challenge response</a>
+                <a class="button radius expand js-reponse-submit" href="#">Post challenge response</a>
             </div>
         </div>
     </div>
