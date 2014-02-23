@@ -61,9 +61,6 @@ gulp.task 'browserify', ->
                     "textrotator":
                         path: "#{path.bower}/textrotator/jquery.simple-text-rotator.js"
                         exports: null
-                    "owl.carousel":
-                        path: "#{path.bower}/owlcarousel/owl-carousel/owl.carousel.js"
-                        exports: null
             )
         )
 
