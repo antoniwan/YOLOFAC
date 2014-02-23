@@ -17,6 +17,7 @@ class CreateResponsesTable extends Migration {
 			$table->increments('id');
 			$table->integer('dare_id')->unsigned();
 			$table->integer('user_id')->unsigned()->nullable();
+			$table->boolen('accepted')->default(0);
 			$table->text('comments');
 			$table->text('video_url');
 			$table->timestamps();
