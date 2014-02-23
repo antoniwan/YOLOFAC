@@ -38,10 +38,31 @@ class Dare
 
     submitEvents: ->
 
+        # check for changes on the form
+        $(".create-dare-form input, create-dare-form select").on "change", (e) ->
+            if(e.currentTarget.name == "donation_amount")
+                # let's edit the donation amount
+                $('.how-much').empty().html( $('#donation_amount').val() )
+
+            if(e.currentTarget.name == "donation_quantity")
+                # let's edit the count thing
+                if(e.currentTarget.value == '1')
+                    $('.only-one').fadeIn()
+                    $('.more-than-one').hide()
+                else
+                    $('.only-one').hide()
+                    $('.more-than-one').fadeIn()
+                    $('.mto-num').empty().html( $('#donation_quantity').val() )
+
+            if(e.currentTarget.name == "title")
+                # let's edit the title thing
+                $('.dare-what').empty().html( $('#title').val().replace(".", "").toLowerCase() )
+
+            console.log e
+            return
+
         $('.js-donation-quantity, .js-donation-amount').bind('paste keyup', () ->
-
             total = parseInt($('.js-donation-quantity').val()) * parseInt($('.js-donation-amount').val())
-
             $('.js-donation-total').val(total)
         )
 

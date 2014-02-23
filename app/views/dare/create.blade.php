@@ -37,7 +37,7 @@
                                 <span class="create-dare-form__mathsymbol" aria-label="times">x</span>
                             </div>
                             <div class="small-3 column">
-                            {{ Form::text('donation_quantity', '&infin;', array('class' => 'big radius js-donation-quantity')) }}
+                            {{ Form::text('donation_quantity', '1', array('id' => 'donation_quantity', 'class' => 'big radius js-donation-quantity')) }}
                             {{ Form::label('donation_quantity', 'Maximum Responses', array('class' => 'milli')) }}
                             </div>
                             <div class="small-1 column">
@@ -72,7 +72,7 @@
                     <fieldset>
                         <h2 class="create-dare-form__step epsilon" data-step="2">Create your dare</h2>
 
-                        {{ Form::text('title', null, array('class' => 'radius', 'placeholder' => 'Insert your dare title&hellip;')) }}
+                        {{ Form::text('title', null, array('id' => 'title', 'class' => 'radius', 'placeholder' => 'Insert your dare title&hellip;')) }}
 
                         {{ Form::textarea('excerpt', null, array(
                             'class' => 'radius',
@@ -150,7 +150,14 @@
 
             <div class="medium-5 large-4 column js-sticky">
                 <blockquote class="dare-preview">
-                    <p>I pledge to donate <strong>$5 dollars</strong> for every person that <strong>swallows a spoonful of cinnamon</strong> for <strong>Paws for You Rescue.</strong></p>
+                    <p>
+                        I pledge to donate
+                        $<strong class="how-much">{{ number_format(1) }}</strong>
+                        <span class="only-one">for</span>
+                        <span class="more-than-one hide">for each of the first <span class="mto-num">2</span> challengers that</span>
+                        <strong class="dare-what">...</strong>
+                        to <strong class="dare-charity">...</strong>.
+                    </p>
                     <footer class="flag">
                         <div class="flag__img">
                             <img src="{{ Auth::user()->services()->first()->service_picture}}" alt="" width="50">
