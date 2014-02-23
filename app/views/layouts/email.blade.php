@@ -28,8 +28,8 @@
             </div>
 
             <footer>
-                <p>You're receiving this because you registered to our application. Unsubscribe <a href="#">here</a>.</p>
-                <p>Battlehack Miami 2014 | Team OneBearDown | Doing it live since 1980.</p>
+                <p>You're receiving this because you registered to our application.</p>
+                <p>PayPal Battlehack Miami 2014 | Team OneBearDown</p>
             </footer>
     </body>
 </html>

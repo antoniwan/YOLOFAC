@@ -50,6 +50,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	        	$service->service_picture = $user_service['service_picture'];
 
 	        	$user->services()->save($service);
+
+                // Welcome Email!
+                // if user registers with twitter, we can't send him an email
+                // because we won't have it
+                if($service->service_name != 'twitter')
+                {
+                    $data = array('name' => $user->name, 'id' => $user->id, 'email' => $user->email);
+                    Mail::send('emails.welcome', $data, function($message) use ($user) {
+                        $message
+                            ->to($user->email, $user->name)
+                            ->subject('#YOLO for a Cause welcomes you!');
+                    });
+                }
+
         	}
         }
 

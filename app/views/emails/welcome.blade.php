@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-    <h2>Hey {{'[name]'}}, thanks for joining #YOLOFAC</h2>
+    <h2>Hey {{ $name }}, thanks for joining #YOLOFAC</h2>
     <strong>What now?</strong>
     <ul>
         <li><a href="#">Dare your friends</a> into doing something you've ever wanted</li>
