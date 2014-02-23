@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>App Title</title>
+    <title>You already do crazy, use charity as your excuse with #YOLOFAC!</title>
 @stop
 
 @section('content')
