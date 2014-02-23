@@ -71,6 +71,15 @@ Route::group(array('prefix' => 'payment'), function(){
 	Route::get('/cancel', function(){
 		var_dump(Input::all());
 	});
+
+	Route::get('/test_capture', function(){
+		Payment::capturePaymentAuthorization();
+	});
+
+	Route::get('/test_authorization', function(){
+		Payment::getPaymentAuthorization();
+	});
+
 });
 
 /*
