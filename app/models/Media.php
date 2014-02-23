@@ -27,4 +27,18 @@ class Media extends Eloquent {
 		return $this->belongsTo('Dare');
 	}
 
+
+	public static function getYoutubeEmebbed($url)
+	{
+		preg_match(
+            '/[\\?\\&]v=([^\\?\\&]+)/',
+            $url,
+            $matches
+        );
+
+        $id = $matches[1];
+
+        return $id;
+	}
+
 }

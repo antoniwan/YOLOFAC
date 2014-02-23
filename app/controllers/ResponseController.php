@@ -16,4 +16,14 @@ class ResponseController extends BaseController {
         }
 	}
 
+    public static function approve($id)
+    {
+        if($response = YoloResponse::find($id)){
+            $response->accepted = 1;
+            $response->save();
+
+            return Redirect::to('/dashboard');
+        }
+    }
+
 }

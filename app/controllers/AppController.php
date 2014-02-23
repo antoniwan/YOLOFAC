@@ -65,6 +65,11 @@ class AppController extends BaseController {
 
     public function showDashboard ()
     {
+
+        $this->data['dares'] = Auth::user()->dares;
+
+        $this->data['responses'] = Auth::user()->responses()->where('accepted', 0)->limit(5)->get();
+
         $this->layout->content = View::make('dashboard', $this->data);
     }
 }

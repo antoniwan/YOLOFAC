@@ -22,9 +22,9 @@
             <a href="#">
                 <img
                  class="auth-controls__profile-pic round"
-                 src="{{ $user['service']->service_picture }}"
+                 src="{{ Auth::user()->services()->first()->service_picture }}"
                  alt="">
-                {{ $user->name }}
+                {{ Auth::user()->name }}
             </a>
             <ul class="dropdown">
                 <li><a href="{{URL::to('/dare/create')}}">Create a dare</a></li>
