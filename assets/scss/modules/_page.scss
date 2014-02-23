@@ -6,7 +6,7 @@
     padding: rem-calc(50px) 0;
 }
 
-.page__box, .page__box--dark {
+.page__box, .page__box--dark, .page__box--flat-bottom {
     padding: rem-calc(25px);
     background: #fff;
     border-radius: 10px;
@@ -14,4 +14,14 @@
 
 .page__box--dark {
     background: #f0f0f0;
+}
+
+.page__box--flat-bottom {
+    padding-bottom: 0;
+}
+
+.page__header--dividing {
+    margin: rem-calc(0 -25px 25px);
+    padding: rem-calc(0 25px 25px);
+    border-bottom: 1px solid #ccc;
 }
