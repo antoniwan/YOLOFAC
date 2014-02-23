@@ -9,10 +9,12 @@
         <header class="home__hero">
             <div class="row">
                 <div class="small-12 column">
-                    <div class="flag flag--bottom flag--no-small">
+                    <div class="flag flag--bottom">
+                        <div class="flag__img show-for-medium-up">
+                            <div class="home__hero-img" role="presentation"></div>
+                        </div>
                         <div class="flag__body">
                             <h1 class="home__hero-heading">You already do crazy,<b>use charity as your excuse!</b></h1>
-
                             <div class="home__hero-cta row collapse">
                                 <div class="small-12 medium-8 column">
                                     <p>Supporting charities has never<br /> been this <span id="crazy-fun">refreshing, fun, interesting, insane, edgy, weird, entertaining, viral, social</span></p>
@@ -21,9 +23,6 @@
                                     <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="flag__img show-for-medium-up">
-                            <div class="home__hero-img" role="presentation"></div>
                         </div>
                     </div>
                 </div>
