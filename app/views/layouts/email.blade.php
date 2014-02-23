@@ -12,47 +12,47 @@
                 padding: 0;
                 margin: 0;
             }
-            html, body {
+            body.html-email-template {
                 background: #EDEFF1;
                 color: #37485D;
                 font-family: "Lato","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
             }
-            .container {
+            .html-email-template .container {
                 width: 550px;
                 box-sizing: border-box;
                 margin: 50px auto;
             }
-            header {
+            .html-email-template header {
                 padding: 15px 30px;
                 background: #37485D;
                 color: white;
                 border-radius: 10px 10px 0 0;
             }
-            #content {
+            .html-email-template #content {
                 padding: 15px 30px;
                 background: white;
                 border-radius: 0 0 10px 10px;
             }
-            footer {
+            .html-email-template footer {
                 font-size: 12px;
                 text-align: center;
                 margin-top: 15px;
             }
-            h2, h3, h4, h5, h6, p {
+            .html-email-template h2, .html-email-template h3, .html-email-template h4, .html-email-template h5, .html-email-template h6, .html-email-template p {
                 margin-bottom: 15px;
             }
-            p {
+            .html-email-template p {
             }
 
-            ul {
+            .html-email-template ul {
                 margin: 15px 0;
                 display: block;
             }
-            ul li {
+            .html-email-template ul li {
                 margin: 5px 0;
                 margin-left: 25px;
             }
-            a {
+            .html-email-template a {
                 color: #37485D;
             }
         </style>
