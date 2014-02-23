@@ -58,6 +58,9 @@ gulp.task 'browserify', ->
                     "sticky-kit":
                         path: "#{path.bower}/sticky-kit/jquery.sticky-kit.js"
                         exports: null
+                    "textrotator":
+                        path: "#{path.bower}/textrotator/jquery.simple-text-rotator.js"
+                        exports: null
             )
         )
 

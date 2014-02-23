@@ -5,7 +5,8 @@
     "foundation": "~5.1.1",
     "jQuery-Facebook-Photo-Selector": "https://github.com/Nobox/jQuery-Facebook-Photo-Selector.git",
     "blueimp-file-upload": "~9.3.0",
-    "foundation-icons": "*"
+    "foundation-icons": "*",
+    "textrotator": "https://github.com/peachananr/simple-text-rotator.git"
   },
   "devDependencies": {
     "scut": "~0.9.1",

@@ -5,6 +5,7 @@ require('foundation.topbar')
 require('foundation.reveal')
 require('jquery.ui.widget')
 require('blueimp.fileupload')
+require('textrotator')
 
 base_url = $('body').data('base')
 
@@ -129,6 +130,12 @@ class Response
                         $('#modal-dare-post').foundation('reveal', 'close')
         )
 
+class Homepage
+    init: ->
+        $('#crazy-fun').textrotator
+            animation: 'fade'
+            separator: ','
+            speed: 1000
 
 class Challenge
     init: ->
@@ -234,6 +241,8 @@ $(document).ready ->
     dare = new Dare()
     challenge = new Challenge()
     response = new Response()
+    homepage = new Homepage()
     dare.init()
     challenge.init()
     response.init()
+    homepage.init()

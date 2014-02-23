@@ -13,11 +13,11 @@
                         <div class="home__hero-img" role="presentation"></div>
                     </div>
                     <div class="flag__body">
-                        <h1 class="home__hero-heading">People do crazy already, <b>let's back it up for good!</b></h1>
+                        <h1 class="home__hero-heading">You already do crazy<b>use charity as your excuse</b></h1>
 
                         <div class="home__hero-cta row collapse">
                             <div class="small-12 medium-8 column">
-                                <p>Pledge to support a charity everytime a friend does a crazy stunt.</p>
+                                <p>Supporting charities has never<br /> been this <span id="crazy-fun">refreshing, fun, interesting, insane, edgy, weird, entertaining, viral, social</span></p>
                             </div>
                             <div class="small-12 medium-4 column">
                                 <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
@@ -76,19 +76,14 @@
                     </footer>
                 </article>
 
-                <p class="home__sidebar-promo-desc">Every week we choose our favorite dare response for your enjoyment. #YOLO</p>
+                <p class="home__sidebar-promo-desc">Every week we’ll highlight a dare response for your enjoyment. #YOLOFAC</p>
 
                 <h2 class="epsilon bold">Featured Charities</h2>
-
-
                 <ul class="home__sidebar-charities small-block-grid-3">
                     @foreach($charities as $charity)
                     <li><a href="#charity{{ $charity->id }}"><img class="expand" src="{{ $charity->media }}" alt="Charity logo"></a></li>
                     @endforeach
                 </ul>
-
-                <p class="home__sidebar-promo-desc">We are honored to do silly stuff for the benefit of the previous non-profit organizations.</p>
-
 
                 </div>
             </div>
