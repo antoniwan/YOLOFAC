@@ -60,6 +60,13 @@
     }
 }
 
+.legit-submission {
+    .author {
+        color: $header-font-color;
+        line-height: 1.5;
+    }
+}
+
 .legit-submissions__shares {
     margin-top: rem-calc(25px);
 }

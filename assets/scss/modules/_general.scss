@@ -25,6 +25,20 @@ figure { margin: 0 }
     margin: 0;
 }
 
+.list-inline {
+    @extend %scut-list-inline;
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.vcenter {
+    @include scut-vcenter-td('.vcenter-inner');
+}
 
 // Author (based off media object)
 // .author {}

@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="small-12 medium-5 large-4 column">
+            <div class="small-12 medium-5 large-4 column js-sticky">
                 <div class="dare-details page__box">
                     <div class="dare-details__mod">
                         <a class="button radius expand" href="#modal-dare-post" data-reveal-id="modal-dare-post" data-reveal>
