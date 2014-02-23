@@ -7,6 +7,8 @@ require('blueimp.fileupload')
 $(document).ready ->
     $(document).foundation()
 
+    console.log('here')
+
     $('#dare-media').fileupload(
     	dataType: 'json',
     	add: (e, data) ->
@@ -40,4 +42,14 @@ $(document).ready ->
 
     	done: (e, data) ->
     		console.log('WE GOT AN UPLOADED FILE')
+    )
+
+    $('.js-embed-media').on('click', (e) ->
+    	e.preventDefault()
+
+    	$media_url = ($('.js-media-url').val()
+
+    	if($media_url != '')
+    		console.log('lets embed this shit!')
+
     )

@@ -29,7 +29,7 @@ class AppController extends BaseController {
 	public function showUserPage()
 	{
 		if(!Auth::check())
-			return Redirect::to('/register');
+			return Redirect::to('/signin');
 
 		echo "<pre>";
 		var_dump(Auth::user());

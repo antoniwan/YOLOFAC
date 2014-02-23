@@ -3,7 +3,7 @@
 @section('content')
 
     @if($errors->count())
-    We got errors
+    <?php var_dump($errors); ?>
     @endif
 
 
@@ -55,7 +55,8 @@
                     <div class="media-submission-fieldset">
                         <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>
 
-                        {{ Form::text('media', null, array('placeholder' => 'Insert a video example&hellip;')) }}
+                        {{ Form::text('media-url', null, array('class' => 'js-media-url', 'placeholder' => 'Insert a video example&hellip;')) }}
+                        <a href="#" class="js-embed-media button small">insert</a>
                         <div class="text-center milli">
                             You can insert links to videos from YouTube, Vine or Instragram.
                         </div>

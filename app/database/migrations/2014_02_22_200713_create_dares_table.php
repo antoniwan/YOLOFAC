@@ -19,6 +19,10 @@ class CreateDaresTable extends Migration {
 			$table->string('title');
 			$table->text('excerpt');
 			$table->text('description');
+
+			$table->bigInteger('donation_amount')->default(0);
+			$table->bigInteger('donation_quantity')->default(0);
+			$table->text('embedded')->nullable();
 			$table->bigInteger('hits')->unsigned()->default(0);
 			$table->timestamps();
 			$table->index('user_id');
