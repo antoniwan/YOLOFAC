@@ -1,6 +1,6 @@
 <?php
 
-class Dare extends Eloquent {
+class Donation extends Eloquent {
 
 	/**
 	 * The database table used by the model.

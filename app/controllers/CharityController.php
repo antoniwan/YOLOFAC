@@ -6,4 +6,9 @@ class CharityController extends BaseController {
 	{
 		return 'need to make this view';
 	}
+
+	public function listAll()
+	{
+		return Response::json(Charity::all());
+	}
 }

@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Charity extends Eloquent implements UserInterface, RemindableInterface {
+class Charity extends Eloquent {
 
 	/**
 	 * The database table used by the model.
