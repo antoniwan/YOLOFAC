@@ -8,6 +8,12 @@ require('blueimp.fileupload')
 require('textrotator')
 base_url = $('body').data('base')
 
+
+FB.init
+    appId : '431802706966452'
+    status : true
+
+
 getEmbeddedData = (media_url) ->
 
     embedded = null
@@ -228,31 +234,20 @@ class Challenge
         )
 
         # challenge-modal friend invite cta
-        $('#challenge-fbinvite a').on('click', (e) =>
+        $('#challenge-fbinvite a, .btn-social--facebook').on('click', (e) =>
             console.log 'click on the fbinvite share'
             $('#challenge-fbinvite a').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
             FB.ui
               method: "feed"
-              name: "The Facebook SDK for Javascript"
-              caption: "Bringing Facebook to the desktop and mobile web"
-              description: ("A small JavaScript library that allows you to harness " + "the power of Facebook, bringing the user's identity, " + "social graph and distribution power to your site.")
-              link: "https://developers.facebook.com/docs/reference/javascript/"
-              picture: "http://www.fbrell.com/public/f8.jpg"
+              name: "YOLO for a cause!"
+              caption: "You already do crazy, use charity as your excuse!"
+              description: 'I dare you to do something crazy! Help me support a local non-profit by doing a crazy stunt and raising money for a great cause. #YOLO for a Cause.'
+              link: base_url + '/dare/show/' + $('#challenge-email').data('dareid')
             , (response) ->
               if response and response.post_id
                 console.log "Post was published."
               else
                 console.log "Post was not published."
-        )
-
-        # challenge-modal twitter cta
-        $('#challenge-tweet a').on('click', (e) =>
-            console.log 'click on the twitter share cta'
-        )
-
-        # challenge-modal fbshare cta
-        $('#challenge-fbshare a').on('click', (e) =>
-            console.log 'click on the fbshare cta'
         )
 
 

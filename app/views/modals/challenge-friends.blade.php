@@ -37,7 +37,7 @@
                 <span class="modal__line">Challenge a friend on Twitter</span>
             </div>
             <div class="medium-5 column">
-                <a class="btn-social--twitter expand" href="#">Challenge</a>
+                <a class="btn-social--twitter expand" href="https://twitter.com/intent/tweet?text={{urlencode('You’ve been dared! Checkout how you can help a good cause by doing something crazy. #YOLOFAC ' . URL::to('/dare/show/' . $dare->id))}}">Challenge</a>
             </div>
         </div>
 
@@ -48,8 +48,7 @@
             <div class="medium-5 column">
                 <ul class="shares-group button-group expand">
                     <li><a class="button btn-social--facebook is-icon" href="#">Facebook</a></li>
-                    <li><a class="button btn-social--twitter is-icon" href="https://twitter.com/intent/tweet?text={{urlencode('I dare you to do something crazy! Help me support a local non-profit by doing a crazy stunt.
-#YOLOFAC')}}">Twitter</a></li>
+                    <li><a class="button btn-social--twitter is-icon" href="https://twitter.com/intent/tweet?text={{urlencode('I dare you to do something crazy! Help me support a local non-profit by doing a crazy stunt. #YOLOFAC')}}">Twitter</a></li>
                     <li><a class="button btn-social--google is-icon" href="">Google</a></li>
                 </ul>
             </div>
