@@ -39,7 +39,6 @@ $(document).ready ->
             $('.media-submission-fieldset').show()
             $('.media-submission-upload').hide()
 
-
         done: (e, data) ->
             console.log('WE GOT AN UPLOADED FILE')
     )
@@ -47,10 +46,8 @@ $(document).ready ->
     $('.js-embed-media').on('click', (e) ->
         e.preventDefault()
 
-        $media_url = ($('.js-media-url').val()
         $media_url = $('.js-media-url').val()
 
-        if($media_url != '')
+        if $media_url
             console.log('lets embed this shit!')
-
     )
