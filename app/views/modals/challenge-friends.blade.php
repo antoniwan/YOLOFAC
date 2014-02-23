@@ -3,7 +3,7 @@
         <h1 class="zeta">Challenge a friend</h1>
     </header>
     <div class="modal__content">
-        <div id="challenge-text" class="modal__row row">
+        <div id="challenge-sms" class="modal__row row">
             <div class="medium-7 column">
                 <label for="challenge-mobile-num">Challenge a friend with a text message</label>
                 <input type="text" id="challenge-mobile-num" placeholder="Insert your friend's mobile number">
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="modal__row row">
+        <div id="challenge-email" class="modal__row row">
             <div class="medium-7 column">
                 <label for="challenge-email">Challenge a friend with an email</label>
                 <input type="text" id="challenge-email" placeholder="Insert your friend's email address">

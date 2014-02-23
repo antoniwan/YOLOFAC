@@ -100,36 +100,42 @@ class Challenge
         @modalEvents()
     modalEvents: ->
         console.log 'modal events loaded'
-        $('#challenge-text a.button').on('click', (e)=>
+
+        # challenge-modal sms cta
+        $('#challenge-sms a.button').on('click', (e)=>
             console.log 'click on the twilio share'
-            console.log $('#challenge-text input')
+            console.log $('#challenge-sms input')
 
             # empty the cta
-            $('#challenge-text input').fadeOut()
-            $('#challenge-text a.button').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
+            $('#challenge-sms input').fadeOut()
+            $('#challenge-sms a.button').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
             # send the SMS text
             $.ajax 'http://local.yolofac.com/dare/sendSMS',
                 type: 'POST'
                 dataType: 'json'
                 data:
-                    number: $('#challenge-text input')[0].value
+                    number: $('#challenge-sms input')[0].value
                 success : (data) ->
                     console.log data
 
                     if(data.error)
                         console.log data.error
                         # reset the CTA and input field
-                        $('#challenge-text input').fadeIn()
-                        $('#challenge-text a.button').empty().html('Send')
+                        $('#challenge-sms input').fadeIn()
+                        $('#challenge-sms a.button').empty().html('Send')
 
                     if(data.sid)
-                        $('#challenge-text a.button').empty().html('SMS Sent Successfuly!')
+                        $('#challenge-sms a.button').empty().html('SMS Sent Successfuly!')
 
                 error: (e) ->
                     console.log e
-                    $('#challenge-text input').fadeIn()
-                    $('#challenge-text a.button').empty().html('Send')
+                    $('#challenge-sms input').fadeIn()
+                    $('#challenge-sms a.button').empty().html('Send')
+        )
 
+        # challenge-modal email cta
+        $('#challenge-email a.button').on('click', (e) =>
+            console.log 'click on the email share'
         )
 
 
