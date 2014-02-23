@@ -51,7 +51,7 @@ class Dare extends Eloquent {
                 $dare->medias()->save($media);
             }
 
-            return $dare->id;
+            return $dare;
         }
     }
 
@@ -63,6 +63,11 @@ class Dare extends Eloquent {
     public function medias()
     {
         return $this->hasMany('Media');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany('Payment');
     }
 
 }

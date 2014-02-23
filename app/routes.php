@@ -44,16 +44,34 @@ Route::group(array('prefix' => 'dare'), function(){
     Route::post('submit', array('before' => 'auth', 'uses' => 'DareController@submitDare'));
     Route::post('media', 'DareController@media');
     Route::post('getInstagram', 'DareController@getInstagram');
-    Route::get('show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
-    Route::get('test', 'DareController@test_media');
 
     // send twilio SMS
     Route::post('sendSMS', array('as' => 'dare.send_sms', 'uses' => 'DareController@sendSMS'));
 
     // send sendgrid dare email
     Route::post('sendDareEmail', array('as' => 'dare.send_email', 'uses' => 'DareController@sendDareEmail'));
+    Route::get('/show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
+    Route::get('/test', 'DareController@test_media');
+    Route::get('/test_payment', 'DareController@testPaypal');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Payment Routes
+|--------------------------------------------------------------------------
+|
+| Here are all the routes that have to do with payments
+|
+*/
+Route::group(array('prefix' => 'payment'), function(){
+	Route::get('/success', function(){
+		Payment::successfulPayment();
+	});
+
+	Route::get('/cancel', function(){
+		var_dump(Input::all());
+	});
+});
 
 /*
 |--------------------------------------------------------------------------
