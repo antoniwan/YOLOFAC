@@ -44,7 +44,7 @@ Route::group(array('prefix' => 'dare'), function(){
     Route::post('submit', array('before' => 'auth', 'uses' => 'DareController@submitDare'));
     Route::post('media', 'DareController@media');
     Route::post('getInstagram', 'DareController@getInstagram');
-
+	Route::get('all', array('as' => 'dare.show.all', 'uses' => 'DareController@makeDares'));
     // send twilio SMS
     Route::post('sendSMS', array('as' => 'dare.send_sms', 'uses' => 'DareController@sendSMS'));
 
@@ -54,6 +54,7 @@ Route::group(array('prefix' => 'dare'), function(){
     Route::get('/test', 'DareController@test_media');
     Route::get('/test_payment', 'DareController@testPaypal');
 });
+
 
 /*
 |--------------------------------------------------------------------------

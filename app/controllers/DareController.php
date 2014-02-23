@@ -128,4 +128,10 @@ class DareController extends BaseController {
 
         return Redirect::to($payment_url);
     }
+
+    public function makeDares()
+    {
+        $this->data['dares'] = Dare::take(8)->orderBy('created_at')->get();
+        $this->layout->content = View::make('dare.all', $this->data);
+    }
 }
