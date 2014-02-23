@@ -3,6 +3,11 @@
  */
 
 // Big input elements in some page forms
+textarea {
+    min-height: rem-calc(100px);
+    resize: vertical;
+}
+
 .big[type="text"] {
     padding: rem-calc(26px);
     font-size: rem-calc(32px);

@@ -4,10 +4,16 @@
 
 .modal {
     border-radius: 5px;
+
+    @media #{$small-only} {
+        margin-top: rem-calc(-28px);
+        margin-left: -47.5%;
+        width: 95%;
+    }
 }
 
 .modal__header {
-    padding: rem-calc(25px);
+    padding: rem-calc(15px);
     background: $topbar-bg-color;
     border-radius: 3px 3px 0 0;
     color: #fff;
@@ -16,11 +22,15 @@
         color: #fff;
         font-weight: bold;
     }
+
+    @media #{$medium-up} {
+        padding: rem-calc(25px);
+    }
 }
 
 .modal__row {
-    margin-top: rem-calc(25px);
-    margin-bottom: rem-calc(25px);
+    margin-top: rem-calc(15px);
+    margin-bottom: rem-calc(15px);
 
     input, .button, .social-group, .btn-social--facebook, .btn-social--twitter {
         margin-bottom: 0;
@@ -28,6 +38,11 @@
 
     .valign-bottom {
         margin-top: rem-calc(15px);
+    }
+
+    @media #{$medium-up} {
+        margin-top: rem-calc(25px);
+        margin-bottom: rem-calc(25px);
     }
 }
 

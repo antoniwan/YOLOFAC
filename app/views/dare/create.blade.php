@@ -105,7 +105,7 @@
                                     <span class="round">or</span>
                                 </div>
 
-                                <ul class="create-dare-form__media-actions small-block-grid-2">
+                                <ul class="create-dare-form__media-actions small-block-grid-1 medium-block-grid-2">
                                     <li class="file-input-replace">
                                         <a class="button secondary small expand" href="#">Upload a picture</a>
                                         <input class="button secondary small expand" id="dare-media" type="file" name="files[]" data-url="{{ URL::to('dare/media') }}">
