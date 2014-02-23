@@ -1,6 +1,7 @@
 @extends('layouts.master');
 
 @section('content')
+    <!--pre><?php var_dump($dare); var_dump($user); ?></pre-->
     <main class="dare-single page">
         <div class="row">
             <div class="small-12 medium-7 large-8 column">
@@ -9,12 +10,22 @@
                         <div class="flag flag--top">
                             <div class="flag__img"><img src="//placehold.it/50x50" alt=""></div>
                             <div class="author flag__body">
-                                <strong class="author__name">Waldemar Figueroa</strong>
-                                <span class="author__location">Miami</span>
+                                <strong class="author__name">{{ $user->name }}</strong>
+                                <span class="author__location">Miami, FL</span>
                             </div>
                         </div>
 
-                        <h2 class="dare-single__challenge">I pledge to donate <strong>$5 dollars</strong> for every person that <strong>swallows a spoonful of cinnamon</strong> for <strong>Paws 4 You Rescue</strong>.</h2>
+                        <h2 class="dare-single__challenge">
+                            I pledge to donate
+                            <strong>${{ $dare->donation_amount }}</strong>
+                            @if($dare->donation_quantity == 1)
+                            if
+                            @else
+                            for each of the first {{ $dare->donation_quantity }} challengers that
+                            @endif
+                            <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>
+                            for <strong>[charity name]</strong>.
+                        </h2>
                     </header>
 
                     <ul class="dare-single__actions small-block-grid-2">
@@ -84,8 +95,8 @@
                         </div>
                     </div>
                     <div class="dare-details__mod">
-                        <span class="dare-details__title">Not that crazy&hellip;</span>
-                        <p>You're not #YOLO, may more of a #CrazyinMiami. Don't worry you can also donate to our sponsored cause.</p>
+                        <span class="dare-details__title">Feeling charitable?</span>
+                        <p>You can also donate to our sponsored cause here.</p>
 
                         <form class="dare-details__donate-cta">
                             <span class="dare-details__title milli">Insert your donation amount</span>

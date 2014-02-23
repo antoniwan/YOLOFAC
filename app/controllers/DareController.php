@@ -43,8 +43,17 @@ class DareController extends BaseController {
     }
 
 
-    public function showDare()
+    public function showDare($dareId = null)
     {
+        if(!$dareId)
+            return Rediret::to('/');
+
+        $dare = Dare::find($dareId);
+        if(!$dare)
+            return Redirect::to('/');
+
+        $this->data['dare'] = $dare;
+        $this->data['user'] = User::find($dare->user_id);
         $this->layout->content = View::make('dare.single', $this->data);
     }
 
