@@ -19,7 +19,7 @@
         </li>
         @else
         <li class="auth-controls has-dropdown">
-            <a href="#">
+            <a href="{{route('dashboard')}}">
                 <img
                  class="auth-controls__profile-pic round"
                  src="{{ Auth::user()->services()->first()->service_picture }}"

@@ -54,6 +54,15 @@ class Dare extends Eloquent {
         }
     }
 
+    public function getTotalRaised()
+    {
+        if( $total_responses = $this->responses()->where('accepted', 1)->count())
+            $total_responses * $this->donation_amount;
+
+        return $total_responses;
+
+    }
+
     public function user()
     {
         return $this->belongsTo('User');
