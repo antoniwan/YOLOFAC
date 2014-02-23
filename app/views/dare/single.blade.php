@@ -7,7 +7,7 @@
                 <div class="page__box--flat-bottom">
                     <header class="dare-single__header">
                         <div class="flag flag--top">
-                            <div class="flag__img"><img src="{{ $dare['user']['service']->service_picture }}" alt="" width="50" height="50"></div>
+                            <div class="flag__img"><img src="{{ $dare->user->services->first()->service_picture }}" alt="" width="50" height="50"></div>
                             <div class="author flag__body">
                                 <strong class="author__name">{{ $dare['user']->name }}</strong>
                                 <span class="author__location">Miami, FL</span>
