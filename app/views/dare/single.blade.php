@@ -19,12 +19,12 @@
                             I pledge to donate
                             <strong>${{ $dare->donation_amount }}</strong>
                             @if($dare->donation_quantity == 1)
-                            if
+                            for
                             @else
                             for each of the first {{ $dare->donation_quantity }} challengers that
                             @endif
                             <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>
-                            for <strong>[charity name]</strong>.
+                            to <strong>[charity name]</strong>.
                         </h2>
                     </header>
 
