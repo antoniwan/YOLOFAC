@@ -17,11 +17,20 @@
     }
 }
 
-.auth-controls {
+.app-logo {
+    background: url("../img/logo-app.png") no-repeat rem-calc(10px) center;
+    background-size: 35px;
+    color: $primary-color;
+}
+
+.top-bar .name h1 .app-logo {
+    padding-left: rem-calc(55px);
+    width: auto;
+    color: $primary-color;
 }
 
 .auth-controls__profile-pic {
-    @include scut-size(35px 35px);
+    @include scut-size(30px 30px);
     border: 1px solid #FFF;
     margin-right: 10px;
 }

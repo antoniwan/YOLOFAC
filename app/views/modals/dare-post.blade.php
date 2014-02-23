@@ -16,9 +16,16 @@
 
                 </div>
                 <div class="js-response-video-form">
-                    <input class="js-insert-response-video-url" type="text" placeholder="Insert a video example&hellip;">
+                    <div class="row collapse">
+                        <div class="small-8 column">
+                            <input class="js-insert-response-video-url" type="text" placeholder="Insert a video example&hellip;">
+                        </div>
+                        <div class="small-4 column">
+                            <a class="button postfix radius small js-insert-response-video" href="#">Attach</a>
+                        </div>
+                    </div>
+
                     <div class="dare-post__video-note milli text-center">You can insert links to videos from YouTube.</div>
-                    <a class="button radius small js-insert-response-video" href="#">Insert</a>
                 </div>
             </div>
         </div>

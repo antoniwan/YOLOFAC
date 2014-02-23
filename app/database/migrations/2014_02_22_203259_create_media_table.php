@@ -16,7 +16,7 @@ class CreateMediaTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('dare_id')->unsigned();
-			$table->string('media_url');
+			$table->string('media_url')->nullable();
 			$table->text('media_meta')->nullable();
 			$table->string('source')->default('yolo');
 			$table->timestamps();

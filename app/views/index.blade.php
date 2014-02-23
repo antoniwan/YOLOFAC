@@ -34,27 +34,32 @@
                 <h2 class="delta bold">Latest Dares</h2>
 
                 <ul class="small-block-grid-1 medium-block-grid-2">
-                    @for ($i = 0; $i < 6; $i++)
+
+                    @foreach($dares as $dare)
                     <li>
                         <article class="dare-widget">
                             <figure class="flex-video">
-                                <iframe src="//www.youtube.com/embed/EdM_u5y5m5A" frameborder="0" allowfullscreen></iframe>
+                                @if($dare->medias->first()->source == 'yolo')
+                                    <img src="{{$dare->medias->first()->media_url}}">
+                                @elseif($dare->medias->first()->source == 'youtube')
+                                    <iframe src="//www.youtube.com/embed/{{Media::getYoutubeEmebbed($dare->medias->first()->media_meta)}}" frameborder="0" allowfullscreen></iframe>
+                                @endif
                             </figure>
 
-                            <p class="dare-widget__desc">I pledge to donate $5 dollars for every persont that swallows a spoonful of cinnamon.</p>
+                            <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
 
                             <footer class="dare-widget__meta flag flag--inverted nano">
                                 <div class="flag__body">
-                                    <span><b>$200</b> Donated</span>
-                                    <span><b>35</b> Responses</span>
+                                    <span><b>${{$dare->getTotalRaised()}}</b> Donated</span>
+                                    <span><b>{{$dare->responses->count()}}</b> Responses</span>
                                 </div>
                                 <div class="flag__img">
-                                    <img src="//placehold.it/50x50" alt="">
+                                    <img src="{{$dare->user->services->first()->service_picture}}" alt="" width="50">
                                 </div>
                             </footer>
                         </article>
                     </li>
-                    @endfor
+                    @endforeach
                 </ul>
             </div>
 

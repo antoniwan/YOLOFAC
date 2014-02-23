@@ -6,16 +6,17 @@ class AppController extends BaseController {
 
     public function showIndex()
     {
+
+        $this->data['dares'] = Dare::take(8)->orderBy('created_at')->get();
+
         $this->data['charities'] = Charity::all();
         $this->layout->content = View::make('index', $this->data);
     }
 
     public function showRegister()
     {
-
         if(Auth::check())
             return Redirect::to('user');
-
 
         $this->data['service_urls'] = array(
             'twitter' =>  Service::retrieveLoginUrl('twitter'),
