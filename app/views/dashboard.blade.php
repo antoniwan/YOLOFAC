@@ -20,7 +20,7 @@
                         <div class="row collapse">
                             <div class="small-12 medium-6 column vcenter">
                                 <div class="dare-actions vcenter-inner">
-                                    <span class="dare-actions__dare-title">{{$dare->title}}</span>
+                                    <a href="{{URL::to('dare/show/' . $dare->id )}}"><span class="dare-actions__dare-title">{{$dare->title}}</span></a>
                                     <small><a href="#">Edit</a></small>
                                 </div>
                             </div>
