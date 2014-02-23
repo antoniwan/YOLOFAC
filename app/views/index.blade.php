@@ -77,14 +77,14 @@
                     </footer>
                 </article>
 
-                <p class="home__sidebar-promo-desc">Every week we choose our favorite dare response for your enjoyment. #YOLO</p>
+                <p class="home__sidebar-promo-desc">Every week we choose our favorite dare response for your enjoyment.</p>
 
                 <h2 class="epsilon bold">Featured Charities</h2>
 
 
                 <ul class="home__sidebar-charities small-block-grid-3">
                     @foreach($charities as $charity)
-                    <li><a href="#charity{{ $charity->id }}"><img class="expand" src="{{ $charity->media }}" alt="Charity logo"></a></li>
+                    <li><a href="charities/show/{{ $charity->id }}"><img class="expand" src="{{ $charity->media }}" alt="Charity logo"></a></li>
                     @endforeach
                 </ul>
 
