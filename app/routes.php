@@ -105,7 +105,7 @@ Route::group(array('prefix' => 'response'), function(){
 |
 */
 Route::group(array('prefix' => 'charities'), function(){
-	Route::get('/', 'CharityController@showIndex');
+	Route::get('/', array('as' => 'charity.all', 'uses' => 'CharityController@showIndex'));
 	Route::get('show/{id?}', array('as' => 'charity.single', 'uses' => 'CharityController@showCharity'));
 });
 

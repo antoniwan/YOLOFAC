@@ -37,7 +37,8 @@
 
       <!-- Left Nav Section -->
       <ul class="left">
-        <li><a href="#">Browse Community</a></li>
+        <li><a href="{{ route('charity.all') }}">Browse Charities</a></li>
+        <li><a href="#">Browse Dares</a></li>
       </ul>
     </section>
   </header>

@@ -6,7 +6,9 @@ class CharityController extends BaseController {
 
 	public function showIndex()
 	{
-		return 'need to make this view';
+		$this->data['dares'] = Dare::take(8)->orderBy('created_at')->get();
+        $this->data['charities'] = Charity::all();
+		$this->layout->content = View::make('charity.all', $this->data);
 	}
 
 	public function listAll()
