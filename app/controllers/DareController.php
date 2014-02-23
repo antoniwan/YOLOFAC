@@ -60,6 +60,16 @@ class DareController extends BaseController {
 
     public function listAll()
     {
-        return Response::json(Dare::all());
+        $dares = Dare::all()->toArray();
+        foreach($dares as $dare)
+        {
+            $agg_dares[$dare['id']]['id'] = $dare['id'];
+            $agg_dares[$dare['id']]['date_submitted'] = $dare['created_at'];
+            $agg_dares[$dare['id']]['dare_data'] = $dare;
+            $agg_dares[$dare['id']]['user_data'] = User::find($dare['user_id'])->toArray(); //extremely inefficient, FPO
+            $agg_dares[$dare['id']]['donations_data'] = '';
+            $agg_dares[$dare['id']]['challengers_data'] = '';
+        }
+        return Response::json($agg_dares);
     }
 }
