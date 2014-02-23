@@ -9,6 +9,7 @@
 %btn-social {
     position: relative;
     @include button;
+    text-indent: rem-calc(50px);
 
     &:before {
         width: rem-calc(50px);
@@ -29,6 +30,10 @@
             width: auto;
             border-right: none;
         }
+    }
+
+    &.expand {
+        display: block;
     }
 }
 
@@ -72,6 +77,15 @@
     .button {
         display: block;
         margin-bottom: 0;
+    }
+
+    &.expand {
+        display: block;
+        width: 100%;
+
+        .button {
+            width: 100%;
+        }
     }
 
     @media #{$small-only} {

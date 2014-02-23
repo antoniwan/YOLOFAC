@@ -28,8 +28,8 @@
 
 /* Smaller font sizes */
 %milli, .milli {
-    font-size: rem-calc(14px);
+    font-size: rem-calc(14px) !important;
 }
 %nano, .nano {
-    font-size: rem-calc(12px);
+    font-size: rem-calc(12px) !important;
 }

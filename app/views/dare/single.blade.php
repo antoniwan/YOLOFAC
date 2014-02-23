@@ -24,7 +24,7 @@
                             </a>
                         </li>
                        <li>
-                            <a class="button radius expand" href="#">
+                            <a class="button radius expand" href="#modal-challenge-friends" data-reveal-id="modal-challenge-friends" data-reveal>
                                 <strong>Dare a friend</strong> to create a video!
                             </a>
                         </li>
@@ -97,4 +97,6 @@
             </div>
         </div>
     </main>
+
+    @include('modals.challenge-friends')
 @show
