@@ -31,27 +31,29 @@
                         </div>
                     </header>
 
-                    <ul class="dare-single__actions small-block-grid-2">
-                        <li>
-                            <span class="dare-details__title">Money Donated</span>
-                            <div class="round-box large">
-                                <b>$200</b>
-                            </div>
-                        </li>
-                       <li>
-                            <span class="dare-details__title">Dare Responses</span>
-                            <div class="round-box large">
-                                <b>35</b>
-                                <ul class="dare-details__donors">
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="dare-single__actions">
+                        <ul class="small-block-grid-1 medium-block-grid-2">
+                            <li>
+                                <span class="dare-details__title">Money Donated</span>
+                                <div class="round-box large">
+                                    <b>$200</b>
+                                </div>
+                            </li>
+                           <li>
+                                <span class="dare-details__title">Dare Responses</span>
+                                <div class="round-box large">
+                                    <b>35</b>
+                                    <ul class="dare-details__donors">
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="dare-single__responses page__box">
@@ -67,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="legit-submission flag__body">
-                                <span class="author"><b>Jesse Montano<b> <small>2d 3h ago</small></span>
+                                <span class="author"><b>Jesse Montano</b> <small>2d 3h ago</small></span>
                                 <p>BOOM! My face itched and burned for almost a month but it was worth it! Keep on pushing on for Paws 4 You Rescue.</p>
 
                                 <figure class="flex-video">
