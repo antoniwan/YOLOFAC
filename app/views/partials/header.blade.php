@@ -11,7 +11,14 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li><a class="button round" href="{{ route('dare.create') }}">Create a dare</a></li>
-        <li><a class="button round" href="{{ route('register') }}">Sign In</a></li>
+        @if(!Auth::check())
+          <li><a class="button round" href="{{ route('register') }}">Sign In</a></li>
+        @else
+          <!-- user is logged-in -->
+          <li><a href="#"><img src="{{ $user['service']->service_picture }}" alt="" width="50" height="50">{{ $user->name }} </a></li>
+          <li><a href="{{ route('logout') }}">Logout</a></li>
+        @endif
+
       </ul>
 
       <!-- Left Nav Section -->
