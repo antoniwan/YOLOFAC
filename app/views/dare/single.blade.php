@@ -31,12 +31,12 @@
                     <ul class="dare-single__actions small-block-grid-2">
                         <li>
                             <a class="button radius expand" href="#">
-                                <strong>Post your dare video</strong> and make him pay!
+                                <strong>Post your dare evidence</strong> and make him pay!
                             </a>
                         </li>
                        <li>
                             <a class="button radius expand" href="#modal-challenge-friends" data-reveal-id="modal-challenge-friends" data-reveal>
-                                <strong>Dare a friend</strong> to DO IT!
+                                <strong>Dare someone</strong> to DO IT!
                             </a>
                         </li>
                     </ul>
