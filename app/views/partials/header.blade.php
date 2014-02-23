@@ -28,7 +28,7 @@
             </a>
             <ul class="dropdown">
                 <li><a href="{{URL::to('/dare/create')}}">Create a dare</a></li>
-                <li><a href="#">My dares</a></li>
+                <li><a href="{{route('dashboard')}}">My dares</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
         </li>

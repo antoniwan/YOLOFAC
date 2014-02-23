@@ -3,6 +3,11 @@
 @section('content')
 
     <main class="dashboard page">
+
+        @if(isset($capture_dare))
+            "YOU JUST PAID FOR A RESPONSE IN FARE ID: " {{$capture_dare->id}}
+        @endif
+
         <div class="row">
             <div class="small-12 medium-8 column">
                 <section class="page__box">

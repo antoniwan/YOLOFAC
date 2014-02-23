@@ -139,9 +139,8 @@ class Payment extends Eloquent {
         echo "</pre>";
     }
 
-    public static function capturePaymentAuthorization()
+    public static function capturePaymentAuthorization($dare)
     {
-        $dare = Dare::find(36);
         $payment = $dare->payments->first();
 
         $authorization_id = $payment->authorization_id;
@@ -150,7 +149,7 @@ class Payment extends Eloquent {
 
         try {
             $amount = new PayPal\Api\Amount();
-            $amount->setCurrency('USD')->setTotal('110.00');
+            $amount->setCurrency('USD')->setTotal($dare->donation_amount);
 
             $capture = new PayPal\Api\Capture();
             $capture->setId($authorization_id)->setAmount($amount);
@@ -160,9 +159,8 @@ class Payment extends Eloquent {
         } catch (PayPal\Exception\PPConnectionException $ex) {
             var_dump($ex);
         }
-        echo "<pre>";
-        var_dump($getCapture->toArray());
-        echo "</pre>";
+
+        return true;
     }
 
     public function dare()

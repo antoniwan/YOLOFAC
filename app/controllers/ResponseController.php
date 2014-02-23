@@ -19,10 +19,13 @@ class ResponseController extends BaseController {
     public static function approve($id)
     {
         if($response = YoloResponse::find($id)){
-            $response->accepted = 1;
-            $response->save();
 
-            return Redirect::to('/dashboard');
+            if(Payment::capturePaymentAuthorization($response->dare)){
+                $response->accepted = 1;
+                $response->save();
+
+                return Redirect::to('/dashboard')->with('capture_dare_id', $response->dare->id);;
+            }
         }
     }
 

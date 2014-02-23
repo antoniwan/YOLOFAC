@@ -66,6 +66,9 @@ class AppController extends BaseController {
     public function showDashboard ()
     {
 
+        if(Session::has('capture_dare_id'))
+            $this->data['capture_dare'] = Dare::find(Session::get('capture_dare_id'));
+
         $this->data['dares'] = Auth::user()->dares;
 
         $this->data['responses'] = Auth::user()->responses()->where('accepted', 0)->limit(5)->get();
