@@ -23,14 +23,15 @@
                                     <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>.
                                 </h2>
 
+                                @if($dare->medias->count())
                                 <figure class="flex-video">
-
                                     @if($dare->medias->first()->source == 'yolo')
                                         <img src="{{$dare->medias->first()->media_url}}">
                                     @elseif($dare->medias->first()->source == 'youtube')
                                         <iframe src="//www.youtube.com/embed/{{Media::getYoutubeEmebbed($dare->medias->first()->media_meta)}}" frameborder="0" allowfullscreen></iframe>
                                     @endif
                                 </figure>
+                                @endif
                             </div>
                         </div>
                     </header>
