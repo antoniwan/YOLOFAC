@@ -19,8 +19,8 @@ class CreateDaresTable extends Migration {
 			$table->string('title');
 			$table->text('excerpt');
 			$table->text('description');
+			$table->bigInteger('hits')->unsigned()->default(0);
 			$table->timestamps();
-
 			$table->index('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 		});
