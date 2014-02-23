@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'remote_prod_mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
+		'local_mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'database',
@@ -63,24 +63,28 @@ return array(
 			'prefix'    => '',
 		),
 
-		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+		'remote_prod_mysql' => array(
+			'driver'   => 'mysql',
+			'host'     => '174.143.28.7',
+			'database' => '522606_yolofac',
+			'username' => '522606_yolofac',
+			'password' => 'YoloFAC420',
 			'charset'  => 'utf8',
+			'collation' => 'utf8_unicode_ci',
 			'prefix'   => '',
-			'schema'   => 'public',
+			'schema'   => '',
 		),
 
-		'sqlsrv' => array(
-			'driver'   => 'sqlsrv',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+		'prod_mysql' => array(
+			'driver'   => 'mysql',
+			'host'     => 'mysql51-109.wc2.dfw1.stabletransit.com',
+			'database' => '522606_yolofac',
+			'username' => '522606_yolofac',
+			'password' => 'YoloFAC420',
+			'charset'  => 'utf8',
+			'collation' => 'utf8_unicode_ci',
 			'prefix'   => '',
+			'schema'   => '',
 		),
 
 	),
