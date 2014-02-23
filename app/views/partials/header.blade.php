@@ -23,8 +23,8 @@
                 {{ $user->name }}
             </a>
             <ul class="dropdown">
-                <li><a href="#">Create a challenge</a></li>
-                <li><a href="#">My challenges</a></li>
+                <li><a href="#">Create a dare</a></li>
+                <li><a href="#">My dares</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
         </li>
