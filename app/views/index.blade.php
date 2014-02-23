@@ -36,7 +36,7 @@
                 <ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
                     @foreach($dares as $dare)
                     <li>
-                        <a href="{{URL::to('/dare/show/' . $dare->id)}}">
+                        <a class="anchor--dark" href="{{URL::to('/dare/show/' . $dare->id)}}">
                             <article class="dare-widget">
                                 <div data-equalizer-watch>
                                     @if($dare->medias->count())

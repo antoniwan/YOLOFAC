@@ -36,6 +36,10 @@ figure { margin: 0 }
     }
 }
 
+.anchor--dark {
+    color: $topbar-bg-color;
+}
+
 .vcenter {
     @include scut-vcenter-td('.vcenter-inner');
 }

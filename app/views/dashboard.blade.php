@@ -3,16 +3,17 @@
 @section('content')
 
     <main class="dashboard page">
-
-        @if(isset($capture_dare))
-            "YOU JUST PAID FOR A RESPONSE IN FARE ID: " {{$capture_dare->id}}
-        @endif
-
         <div class="row">
             <div class="small-12 medium-8 column">
+                @if(isset($capture_dare))
+                    <div data-alert class="alert-box radius success">
+                        <strong>Success! The message has been approved and the donation delivered.</strong>
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                @endif
+
                 <section class="page__box">
                     <h1 class="page__header--dividing zeta">My Dares</h1>
-
 
                     @foreach($dares as $dare)
 
@@ -20,8 +21,7 @@
                         <div class="row collapse">
                             <div class="small-12 medium-6 column vcenter">
                                 <div class="dare-actions vcenter-inner">
-                                    <a href="{{URL::to('dare/show/' . $dare->id )}}"><span class="dare-actions__dare-title">{{$dare->title}}</span></a>
-                                    <small><a href="#">Edit</a></small>
+                                    <a class="anchor--dark" href="{{URL::to('dare/show/' . $dare->id )}}"><span class="dare-actions__dare-title">{{$dare->title}}</span></a>
                                 </div>
                             </div>
                             <div class="small-12 medium-6 column">
@@ -30,16 +30,9 @@
                                         <strong>${{$dare->getTotalRaised()}}</strong>
                                     </div>
                                     <div class="dare-history__responders flag__body">
-                                        <span class="dare-history__responders__amount">{{$dare->responses()->count()}}</span>
-                                        <?php $count = 0; ?>
-                                        @foreach($dare->responses as $response)
-                                            <?php
-                                                if($count > 5)
-                                                    break;
-                                            ?>
-                                            <img src="//placehold.it/25x25" alt="">
-                                            <?php $count++; ?>
-                                        @endforeach
+                                        <span class="dare-history__responders__amount">
+                                            {{$dare->responses()->count()}}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
