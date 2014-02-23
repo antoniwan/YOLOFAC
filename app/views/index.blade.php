@@ -80,10 +80,11 @@
 
                 <h2 class="epsilon bold">Featured Charities</h2>
 
+
                 <ul class="home__sidebar-charities small-block-grid-3">
-                    @for ($i = 0; $i < 9; $i++)
-                    <li><img class="expand" src="//placehold.it/100x100" alt="Charity logo"></li>
-                    @endfor
+                    @foreach($charities as $charity)
+                    <li><a href="#charity{{ $charity->id }}"><img class="expand" src="{{ $charity->media }}" alt="Charity logo"></a></li>
+                    @endforeach
                 </ul>
 
                 <p class="home__sidebar-promo-desc">We are honored to do silly stuff for the benefit of the previous non-profit organizations.</p>

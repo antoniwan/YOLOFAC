@@ -6,6 +6,7 @@ class AppController extends BaseController {
 
     public function showIndex()
     {
+    	$this->data['charities'] = Charity::all();
         $this->layout->content = View::make('index', $this->data);
     }
 
