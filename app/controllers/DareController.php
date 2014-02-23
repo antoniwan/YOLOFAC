@@ -16,9 +16,10 @@ class DareController extends BaseController {
 
             $response = Dare::validate($dare_submission);
 
-            if(is_int($response) && $response)
-                return Redirect::to('/dare/show/' . $response);
-            else
+            if(isset($response->id)){
+                $payment_url = Payment::generateUserPaymentAuthorization($response);
+                return Redirect::to($payment_url);
+            }else
                 return Redirect::to('/dare/create')->withErrors($response);
         }
 
@@ -119,5 +120,14 @@ class DareController extends BaseController {
                 ->subject('Someone has dared you!');
         });
         return Response::json(array('success' => 'mail_sent'));
+    }
+
+    public function testPaypal()
+    {
+        $dare = Dare::find(18);
+
+        $payment_url = Payment::generateUserPaymentAuthorization($dare);
+
+        return Redirect::to($payment_url);
     }
 }

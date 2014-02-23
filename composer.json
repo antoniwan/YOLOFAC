@@ -6,7 +6,8 @@
     "require": {
         "laravel/framework": "4.1.*",
         "lusitanian/oauth": "0.1.*@dev",
-        "twilio/sdk": "dev-master"
+        "twilio/sdk": "dev-master",
+        "paypal/rest-api-sdk-php": "dev-master"
     },
     "autoload": {
         "classmap": [
