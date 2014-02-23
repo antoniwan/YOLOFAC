@@ -23,6 +23,11 @@
 .flag__img {
     padding-right: rem-calc(25px);
 
+    .flag--inverted & {
+        padding-right: 0;
+        padding-left: rem-calc(25px);
+    }
+
     > img {
         display: block;
         max-width: none;

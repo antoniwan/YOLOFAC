@@ -34,7 +34,6 @@
       <!-- Left Nav Section -->
       <ul class="left">
         <li><a href="#">Browse Community</a></li>
-        <li><a href="{{ route('faq') }}">How does this work?</a></li>
       </ul>
     </section>
   </header>
