@@ -6,7 +6,7 @@
                 <p class="footer__subheadline epsilon">Start acting stupid, you only live once.</p>
             </div>
             <div class="medium-4 column">
-                <a class="button radius right" href="#">Challenge Accepted!</a>
+                <a class="button radius right" href="{{ route('dare.create') }}">Challenge Accepted!</a>
             </div>
         </aside>
     </div>
