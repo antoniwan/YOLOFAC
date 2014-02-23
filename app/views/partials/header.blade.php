@@ -1,5 +1,5 @@
 <div class="contain-to-grid">
-  <header class="top-bar" data-topbar>
+  <header class="header top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
         <h1><a href="{{ route('home') }}">#YOLO for a cause</a></h1>
@@ -14,9 +14,17 @@
         @if(!Auth::check())
           <li><a class="button round" href="{{ route('register') }}">Sign In</a></li>
         @else
-          <!-- user is logged-in -->
-          <li><a href="#"><img src="{{ $user['service']->service_picture }}" alt="" width="50" height="50">{{ $user->name }} </a></li>
-          <li><a href="{{ route('logout') }}">Logout</a></li>
+        <!-- user is logged-in -->
+        <li class="auth-controls">
+            <a href="#">
+                <img
+                 class="auth-controls__profile-pic round"
+                 src="{{ $user['service']->service_picture }}"
+                 alt="">
+                {{ $user->name }}
+            </a>
+        </li>
+        <li><a href="{{ route('logout') }}">Logout</a></li>
         @endif
 
       </ul>

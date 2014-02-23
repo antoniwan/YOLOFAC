@@ -1,0 +1,15 @@
+/**
+ * Header and top bar
+ */
+
+.header {
+
+}
+
+.auth-controls {
+
+}
+
+.auth-controls__profile-pic {
+    @include scut-size(30px 30px);
+}
