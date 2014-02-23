@@ -24,6 +24,15 @@ class CharityController extends BaseController {
         if(!$charity = Charity::find($charityId))
             return Redirect::to('/');
 
+
+        $dares = $charity->dares;
+
+        $this->data['total_raised'] =  0;
+
+        foreach($dares as $dare){
+        	$this->data['total_raised'] += $dare->getTotalRaised();
+        }
+
         $this->data['charity'] = $charity;
         $this->layout->content = View::make('charity.single', $this->data);
     }

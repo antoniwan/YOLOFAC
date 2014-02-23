@@ -19,9 +19,6 @@
                     <li>
                         <a class="button btn-social--google" href="{{ $service_urls['google'] }}">Google</a>
                     </li>
-                    <li>
-                        <a class="button btn-social--paypal" href="{{ $service_urls['paypal'] }}">Paypal</a>
-                    </li>
                 </ul>
                 <p>We won't share your information with any third-party or send you any spam.</p>
             </div>

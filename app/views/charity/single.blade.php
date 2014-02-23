@@ -23,20 +23,22 @@
                         <li>
                             <span class="dare-details__title">Money Donated</span>
                             <div class="round-box large">
-                                <b>$200</b>
+                                <b>${{$total_raised}}</b>
                             </div>
                         </li>
                        <li>
                             <span class="dare-details__title">Dares</span>
                             <div class="round-box large">
-                                <b>35</b>
-                                <ul class="dare-details__donors">
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                    <li><img src="//placehold.it/30x30"></li>
-                                </ul>
+                                @if($charity->responses()->count())
+                                    <b>{{ $charity->responses()->count() }}</b>
+                                    <ul class="dare-details__donors">
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                        <li><img src="//placehold.it/30x30"></li>
+                                    </ul>
+                                @endif
                             </div>
                         </li>
                     </ul>

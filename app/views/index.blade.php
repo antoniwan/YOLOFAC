@@ -36,31 +36,34 @@
                 <ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
                     @foreach($dares as $dare)
                     <li>
-                        <article class="dare-widget">
-                            <div data-equalizer-watch>
-                                @if($dare->medias->count())
-                                <figure class="flex-video">
-                                    @if($dare->medias->first()->source == 'yolo')
-                                        <img src="{{$dare->medias->first()->media_url}}">
-                                    @elseif($dare->medias->first()->source == 'youtube')
-                                        <iframe src="//www.youtube.com/embed/{{Media::getYoutubeEmebbed($dare->medias->first()->media_meta)}}" frameborder="0" allowfullscreen></iframe>
+                        <a href="{{URL::to('/dare/show/' . $dare->id)}}">
+                            <article class="dare-widget">
+                                <div data-equalizer-watch>
+                                    @if($dare->medias->count())
+
+                                    <figure class="flex-video">
+                                        @if($dare->medias->first()->source == 'yolo')
+                                            <img src="{{$dare->medias->first()->media_url}}">
+                                        @elseif($dare->medias->first()->source == 'youtube')
+                                            <iframe src="//www.youtube.com/embed/{{Media::getYoutubeEmebbed($dare->medias->first()->media_meta)}}" frameborder="0" allowfullscreen></iframe>
+                                        @endif
+                                    </figure>
                                     @endif
-                                </figure>
-                                @endif
 
-                                <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
-                            </div>
+                                    <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
+                                </div>
 
-                            <footer class="dare-widget__meta flag flag--inverted nano">
-                                <div class="flag__body">
-                                    <span><b>${{$dare->getTotalRaised()}}</b> Donated</span>
-                                    <span><b>{{$dare->responses->count()}}</b> Responses</span>
-                                </div>
-                                <div class="flag__img">
-                                    <img src="{{$dare->user->services->first()->service_picture}}" alt="" width="50">
-                                </div>
-                            </footer>
-                        </article>
+                                <footer class="dare-widget__meta flag flag--inverted nano">
+                                    <div class="flag__body">
+                                        <span><b>${{$dare->getTotalRaised()}}</b> Donated</span>
+                                        <span><b>{{$dare->responses->count()}}</b> Responses</span>
+                                    </div>
+                                    <div class="flag__img">
+                                        <img src="{{$dare->user->services->first()->service_picture}}" alt="" width="50">
+                                    </div>
+                                </footer>
+                            </article>
+                        </a>
                     </li>
                     @endforeach
                 </ul>

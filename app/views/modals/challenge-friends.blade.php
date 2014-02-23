@@ -28,7 +28,7 @@
                 <span class="modal__line">Challenge a friend on Facebook</span>
             </div>
             <div class="medium-5 column">
-                <a class="btn-social--facebook expand" href="#">Challenge</a>
+                <a class="btn-social--facebook js-facebook-challenge expand" href="#">Challenge</a>
             </div>
         </div>
 

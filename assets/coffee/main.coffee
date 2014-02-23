@@ -235,7 +235,7 @@ class Challenge
         )
 
         # challenge-modal friend invite cta
-        $('#challenge-fbinvite a, .btn-social--facebook').on('click', (e) =>
+        $('#challenge-fbinvite a, .js-facebook-challenge').on('click', (e) =>
             console.log 'click on the fbinvite share'
             $('#challenge-fbinvite a').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
             FB.ui

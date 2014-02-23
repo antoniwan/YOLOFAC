@@ -28,6 +28,12 @@ class Charity extends Eloquent {
 		return $this->hasMany('Dare');
 	}
 
+	public function responses()
+	{
+		return $this->hasManyThrough('YoloResponse', 'Dare');
+	}
+
+
     public function donations()
     {
         return $this->hasMany('Donation');
