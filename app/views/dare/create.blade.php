@@ -156,8 +156,7 @@
                         $<strong class="how-much">{{ number_format(1) }}</strong>
                         <span class="only-one">for</span>
                         <span class="more-than-one hide">for each of the first <span class="mto-num">2</span> challengers that</span>
-                        <strong class="dare-what">...</strong>
-                        to <strong class="dare-charity">...</strong>.
+                        <strong class="dare-what">...</strong>.
                     </p>
                     <footer class="flag">
                         <div class="flag__img">

@@ -20,8 +20,7 @@
                                     @else
                                     for each of the first {{ number_format($dare->donation_quantity) }} challengers that
                                     @endif
-                                    <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>
-                                    to <strong>[charity name]</strong>.
+                                    <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>.
                                 </h2>
 
                                 <figure class="flex-video">
