@@ -79,10 +79,6 @@
                             'class' => 'radius',
                             'placeholder' => 'Insert your short description. Be short and sweet, just like a tweet&hellip;')) }}
 
-                        {{ Form::select('category', array(
-                            '' => 'Select a category'
-                        )) }}
-
                         <div class="media-submission-fieldset">
                             <div class="create-date-form__media-submit">
                                 <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>

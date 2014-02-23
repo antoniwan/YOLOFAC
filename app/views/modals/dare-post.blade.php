@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="dare-post__donation modal__row row">
+        <!--div class="dare-post__donation modal__row row">
             <div class="medium-7 column">
                 <label for="dare-post-donation"><b>I also want to donate</b></label>
                 <p class="milli">Sure no problem just insert your donation amount and we'll be sent to PayPal to confirm your payment.</p>
@@ -38,7 +38,7 @@
                 <div class="expand text-right milli">(Optional)</div>
                 <input class="big" type="text" id="dare-post-donation" value="$0">
             </div>
-        </div>
+        </div-->
         <div class="row">
             <div class="small-12 column">
                 <a class="button radius expand js-reponse-submit" href="#">Post challenge response</a>
