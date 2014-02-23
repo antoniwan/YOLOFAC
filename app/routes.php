@@ -54,10 +54,19 @@ Route::group(array('prefix' => 'charities'), function(){
 	Route::get('/', 'CharityController@showIndex');
 });
 
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::group(array('prefix' => 'api'), function() {
+	Route::get('charities/all', 'CharityController@listAll');
+});
 
 
 // Debug Routes
-Route::geT('/twilio', array('as' => 'twilio', 'uses' => 'AppController@twilioTest'));
+Route::get('/twilio', array('as' => 'twilio', 'uses' => 'AppController@twilioTest'));
 Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
 Route::get('/mailer/template', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeTemplate'));
 Route::get('/mailer/template/welcome', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeWelcome'));
