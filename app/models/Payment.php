@@ -111,6 +111,56 @@ class Payment extends Eloquent {
         echo "User cancelled a payment, delete the dare.";
     }
 
+    public static function getPaymentAuthorization()
+    {
+
+        $dare = Dare::find(36);
+        $payment = $dare->payments->first();
+
+        $authorization_id = $payment->authorization_id;
+
+        $apiContext = self::getApiContext();
+
+        try {
+            // Retrieve the authorization
+            $authorization = PayPal\Api\Authorization::get($authorization_id, $apiContext);
+        } catch (PayPal\Exception\PPConnectionException $ex) {
+            echo "Exception: " . $ex->getMessage() . PHP_EOL;
+            var_dump($ex->getData());
+            exit(1);
+        }
+
+        echo "<pre>";
+        var_dump($authorization);
+        echo "</pre>";
+    }
+
+    public static function capturePaymentAuthorization()
+    {
+        $dare = Dare::find(36);
+        $payment = $dare->payments->first();
+
+        $authorization_id = $payment->authorization_id;
+
+        $apiContext = self::getApiContext();
+
+        try {
+            $amount = new PayPal\Api\Amount();
+            $amount->setCurrency('USD')->setTotal('110.00');
+
+            $capture = new PayPal\Api\Capture();
+            $capture->setId($authorization_id)->setAmount($amount);
+
+            $authorization = PayPal\Api\Authorization::get($authorization_id, $apiContext);
+            $getCapture = $authorization->capture($capture, $apiContext);
+        } catch (PayPal\Exception\PPConnectionException $ex) {
+            var_dump($ex);
+        }
+        echo "<pre>";
+        var_dump($getCapture->toArray());
+        echo "</pre>";
+    }
+
     public function dare()
     {
         return $this->belongsTo('Dare');
