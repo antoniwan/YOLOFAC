@@ -6,7 +6,6 @@
     <?php var_dump($errors); ?>
     @endif
 
-
     <main class="page">
         <div class="row">
             <div class="small-12 medium-7 large-8 column">
@@ -59,7 +58,7 @@
                                 {{ Form::text('media-url', null, array('class' => 'js-media-url', 'placeholder' => 'Insert a video example&hellip;')) }}
                                 <a href="#" class="js-embed-media button small">insert</a>
                                 <div class="text-center milli">
-                                    You can insert links to videos from YouTube, Vine or Instragram.
+                                    You can insert links to videos from YouTube.
                                 </div>
 
                                 <div class="create-dare-form__media-divider">
@@ -79,15 +78,19 @@
                             </div>
 
                             <div class="create-dare-form__media-preview" style="display:none;">
-                                <div class="flag">
-                                    <div class="flag__img">
-                                        <img src="//placehold.it/100x100" alt="">
-                                    </div>
-                                    <div class="flag__body">
-                                        picture_file_name.jpg
-                                        <a href="#" class="js-media-cancel" aria-label="Cancel">x</a>
+                                <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>
+                                <div class="create-dare-form__media-preview-container">
+                                    <div class="flag">
+                                        <div class="flag__img">
+                                            <img src="//placehold.it/100x100" alt="">
+                                        </div>
+                                        <div class="flag__body">
+                                            picture_file_name.jpg
+                                            <a href="#" class="js-media-cancel" aria-label="Cancel">x</a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 

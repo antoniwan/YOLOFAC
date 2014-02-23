@@ -20,7 +20,7 @@
                                 <p>Pledge to support a charity everytime a friend does a crazy stunt.</p>
                             </div>
                             <div class="small-12 medium-4 column">
-                                <a class="button radius small" href="#">Create a dare</a>
+                                <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
                             </div>
                         </div>
                     </div>

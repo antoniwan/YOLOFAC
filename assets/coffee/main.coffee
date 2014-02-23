@@ -18,19 +18,17 @@ class Dare
 
         embedded = null
 
-        if(media_url.indexOf('vine.co') != -1)
-            embedded = '<iframe class="vine-embed" src="' + media_url + '/embed/simple" width="480" height="480" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>';
-        else if(media_url.indexOf('instagram.com') != -1)
-            $.ajax 'http://local.yolofac.com/dare/getInstagram',
-                type: 'POST'
-                dataType: 'json'
-                data:
-                    media_url: media_url
-                success : (data) ->
-                    $('.media-submission-fieldset').hide()
-                    $('.media-submission-upload').show().html('<img src="' + data.url + '">')
+        if(media_url.indexOf('youtube.com') != -1)
+            regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+            match = media_url.match(regExp)
 
-        # return embedded
+            if(match && match[2].length == 11)
+                embedded = '<iframe width="560" height="315" src="//www.youtube.com/embed/' + match[2] + '" frameborder="0" allowfullscreen></iframe>'
+
+
+        return embedded
+
+
 
     submitEvents: ->
 
@@ -88,8 +86,9 @@ class Dare
 
             if($media_url != '')
                 embedded = @getEmbeddedData($media_url)
-                $('.media-submission-fieldset').hide()
-                $('.media-submission-upload').show().html(embedded)
+                $('.create-date-form__media-submit').hide()
+                $('.media-submission-upload').hide()
+                $('.create-dare-form__media-preview').show().find('.create-dare-form__media-preview-container').html(embedded)
 
         )
 ### End Dare Class ###

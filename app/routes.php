@@ -65,7 +65,8 @@ Route::group(array('prefix' => 'dare'), function(){
 */
 Route::group(array('prefix' => 'payment'), function(){
 	Route::get('/success', function(){
-		Payment::successfulPayment();
+		if(Payment::successfulPayment())
+			return Redirect::to('/dare/show/' . Session::get('dare_id'));
 	});
 
 	Route::get('/cancel', function(){
