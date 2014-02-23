@@ -13,7 +13,9 @@
 Route::get('/', array('as' => 'home', 'uses' => 'AppController@showIndex'));
 // Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
 Route::get('/user', array('as' => 'user_page', 'uses' => 'AppController@showUserPage'));
-
+Route::geT('/how', array('as' => 'faq', function(){
+	return 'need to do this view';
+}));
 /*
 |--------------------------------------------------------------------------
 | Authentication Routes
