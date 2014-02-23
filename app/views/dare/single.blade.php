@@ -133,11 +133,17 @@
                         <span class="dare-details__title">Feeling charitable?</span>
                         <p>You can also donate to our sponsored cause here.</p>
 
-                        <form class="dare-details__donate-cta">
                             <span class="dare-details__title milli">Insert your donation amount</span>
-                            <input class="round-box large" type="text" value="$10">
-                            <input class="button radius expand" type="submit" value="Donate Now">
-                        </form>
+                            <input class="round-box large" type="text" value="$10" style="height: 60px;">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="amount" value="100.00">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                            ">
+                            <input style="width:100%" type="image" src="http://i.imgur.com/sFaZ2IN.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>
                     </div>
                 </div>
             </div>
