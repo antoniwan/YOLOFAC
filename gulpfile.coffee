@@ -55,6 +55,9 @@ gulp.task 'browserify', ->
                     "blueimp.fileupload":
                         path: "#{path.bower}/blueimp-file-upload/js/jquery.fileupload.js"
                         exports: null
+                    "foundation.reveal":
+                        path: "#{path.bower}/foundation/js/foundation/foundation.reveal.js"
+                        exports: null
             )
         )
 

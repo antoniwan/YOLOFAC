@@ -5,16 +5,20 @@
 // Modules
 @import "modules/general";
 @import "modules/type";
-@import "modules/media";
+@import "modules/flag";
 @import "modules/buttons";
 @import "modules/forms";
 @import "modules/emails";
 @import "modules/page";
 @import "modules/create-dare-form";
 
+@import "modals/modals";
+<<<<<<< Updated upstream
+@import "modals/challenge-friends";
+=======
+@import "modals/dare-post";
+>>>>>>> Stashed changes
+
 // Views
 @import "views/home";
-<<<<<<< HEAD
-=======
-@import "views/page";
->>>>>>> Added "View dare/challenge page"
+@import "views/single";

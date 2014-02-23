@@ -6,6 +6,11 @@
 figure { margin: 0 }
 
 
+// Helpers
+.expand {
+    display: block;
+}
+
 .list-unstyled {
     @extend %scut-list-unstyled;
     margin: 0;
