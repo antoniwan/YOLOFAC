@@ -76,7 +76,19 @@
 
                                 <footer class="legit-meta row">
                                     <div class="small-12 column">
-                                        <span class="legit-meta__comments">15 comments</span>
+                                        <span class="legit-meta__comments">Show Comments</span>
+                                            <div id="disqus_thread" style="color:black;"></div>
+                                            <script type="text/javascript">
+                                                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                                var disqus_shortname = 'yoloforacause'; // required: replace example with your forum shortname
+
+                                                /* * * DON'T EDIT BELOW THIS LINE * * */
+                                                (function() {
+                                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                                })();
+                                            </script>
                                     </div>
                                 </footer>
                             </div>
@@ -85,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="small-12 medium-5 large-4 column">
+            <div class="small-12 medium-5 large-4 column js-sticky">
                 <div class="dare-details page__box">
                     <div class="dare-details__mod">
                         <a class="button radius expand" href="#modal-dare-post" data-reveal-id="modal-dare-post" data-reveal>

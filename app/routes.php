@@ -12,7 +12,7 @@
 */
 Route::get('/', array('as' => 'home', 'uses' => 'AppController@showIndex'));
 // Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
-Route::get('user', array('as' => 'user_page', 'uses' => 'AppController@showUserPage'));
+Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'AppController@showDashboard'));
 Route::get('how', array('as' => 'faq', function(){
 	return 'need to do this view';
 }));

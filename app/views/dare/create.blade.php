@@ -108,7 +108,13 @@
 
                         <hr>
                         {{ Form::hidden('media-picture', null, array('class' => 'big js-media-picture-url')) }}
+
+                        <div class="show-for-small-only">
+                        {{ Form::submit('Next Step: PayPal details', array('class' => 'button expand')) }}
+                        </div>
+                        <div class="show-for-medium-up">
                         {{ Form::submit('Next Step: Insert your PayPal details', array('class' => 'button right')) }}
+                        </div>
                     </fieldset>
 
                     {{ Form::close() }}
@@ -120,10 +126,10 @@
                     <p>I pledge to donate <strong>$5 dollars</strong> for every person that <strong>swallows a spoonful of cinnamon</strong> for <strong>Paws for You Rescue.</strong></p>
                     <footer class="flag">
                         <div class="flag__img">
-                            <img src="//placehold.it/50x50" alt="">
+                            <img src="{{ Auth::user()->services()->first()->service_picture}}" alt="" width="50">
                         </div>
                         <div class="author flag__body">
-                            <cite class="author__name">Waldemar Figueroa</cite>
+                            <cite class="author__name">{{Auth::user()->name}}</cite>
                             <span class="author__location">Miami, FL</span>
                         </div>
                     </footer>

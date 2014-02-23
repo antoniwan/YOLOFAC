@@ -1,0 +1,40 @@
+/**
+ * View: Dashboard
+ */
+
+.dashboard__dares {
+    margin-bottom: rem-calc(25px);
+}
+
+.dare-history {
+    height: rem-calc(40px);
+    background: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dare-history__total {
+    @extend %epsilon;
+    padding: rem-calc(0 10px);
+    background: $topbar-bg-color;
+    border-radius: 3px 0 0 3px;
+    color: #fff;
+}
+
+.dare-history__responders {
+    img { width: rem-calc(30px) }
+}
+
+.dare-history__responders__amount {
+    display: inline-block;
+    margin-right: rem-calc(5px);
+    vertical-align: middle;
+}
+
+.dare-actions {
+    height: rem-calc(40px);
+}
+
+.dare-actions__dare-title {
+    display: block;
+}

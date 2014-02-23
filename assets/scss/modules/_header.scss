@@ -3,15 +3,25 @@
  */
 
 .header {
+    .button {
+        position: static;
+        color: #fff;
+        width: rem-calc(75px);
+    }
 
+    @media #{$small-only} {
+        .button {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .auth-controls {
-
 }
 
 .auth-controls__profile-pic {
-    @include scut-size(30px 30px);
+    @include scut-size(35px 35px);
     border: 1px solid #FFF;
     margin-right: 10px;
 }

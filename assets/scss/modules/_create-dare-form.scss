@@ -20,10 +20,15 @@
 .create-dare-form__headline {
     @extend %milli;
 
-    small {
-        @extend %zeta;
-        float: right;
-        line-height: 1.3;
+    .end {
+        @extend %nano;
+    }
+
+    @media #{$medium-up} {
+        .end {
+            float: right;
+            line-height: 1.3;
+        }
     }
 }
 
