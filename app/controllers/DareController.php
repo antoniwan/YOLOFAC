@@ -83,4 +83,23 @@ class DareController extends BaseController {
         }
         return Response::json($agg_dares);
     }
+
+    public function sendSMS()
+    {
+        // set-up the twilio api
+        $sid = Config::get('twilio.sid');
+        $token = Config::get('twilio.token');
+        $twilio_number = Config::get('twilio.phone_number');
+
+        if(!Input::has('number'))
+            return Response::json(array('error' => 'no_number'));
+
+        $client = new Services_Twilio($sid, $token);
+        $message = $client->account->messages->sendMessage(
+            $twilio_number,
+            Input::get('number'),
+            'I dare you! '.'http://www.google.com'
+        );
+        return $message;
+    }
 }

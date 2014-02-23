@@ -12,8 +12,8 @@
 */
 Route::get('/', array('as' => 'home', 'uses' => 'AppController@showIndex'));
 // Route::get('/register', array('as' => 'register', 'uses' => 'AppController@showRegister'));
-Route::get('/user', array('as' => 'user_page', 'uses' => 'AppController@showUserPage'));
-Route::get('/how', array('as' => 'faq', function(){
+Route::get('user', array('as' => 'user_page', 'uses' => 'AppController@showUserPage'));
+Route::get('how', array('as' => 'faq', function(){
 	return 'need to do this view';
 }));
 /*
@@ -24,7 +24,7 @@ Route::get('/how', array('as' => 'faq', function(){
 | Here are all the routes that have to do with authenticating, registering the user.
 |
 */
-Route::get('/signin', array('as' => 'register', 'uses' => 'AppController@showRegister'));
+Route::get('signin', array('as' => 'register', 'uses' => 'AppController@showRegister'));
 Route::get('oauth', 'AppController@oauth');
 Route::get('logout', array('as' => 'logout', function() {
 	Auth::logout();
@@ -44,8 +44,11 @@ Route::group(array('prefix' => 'dare'), function(){
     Route::post('submit', array('before' => 'auth', 'uses' => 'DareController@submitDare'));
     Route::post('media', 'DareController@media');
     Route::post('getInstagram', 'DareController@getInstagram');
-    Route::get('/show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
-    Route::get('/test', 'DareController@test_media');
+    Route::get('show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
+    Route::get('test', 'DareController@test_media');
+
+    // twilio stuff
+    Route::post('sendSMS', array('as' => 'dare.send_sms', 'uses' => 'DareController@sendSMS'));
 });
 
 
@@ -78,9 +81,9 @@ Route::group(array('prefix' => 'api'), function() {
 
 
 // Debug Routes
-Route::get('/twilio', array('as' => 'twilio', 'uses' => 'AppController@twilioTest'));
-Route::get('/mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
-Route::get('/mailer/template', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeTemplate'));
-Route::get('/mailer/template/welcome', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeWelcome'));
-Route::get('/mailer/template/dare-placed', array('as' => 'mailer-template-dare-placed', 'uses' => 'MailerController@makeDarePlaced'));
-Route::get('/mailer/template/dare-owned', array('as' => 'mailer-template-dare-owned', 'uses' => 'MailerController@makeDareOwned'));
+Route::get('twilio', array('as' => 'twilio', 'uses' => 'AppController@twilioTest'));
+Route::get('mailer', array('as' => 'mailer', 'uses' => 'MailerController@index'));
+Route::get('mailer/template', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeTemplate'));
+Route::get('mailer/template/welcome', array('as' => 'mailer-template-welcome', 'uses' => 'MailerController@makeWelcome'));
+Route::get('mailer/template/dare-placed', array('as' => 'mailer-template-dare-placed', 'uses' => 'MailerController@makeDarePlaced'));
+Route::get('mailer/template/dare-owned', array('as' => 'mailer-template-dare-owned', 'uses' => 'MailerController@makeDareOwned'));
