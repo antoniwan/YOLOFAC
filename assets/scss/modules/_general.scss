@@ -2,7 +2,32 @@
  * General modules
  */
 
+// Figures do not have margins
+figure { margin: 0 }
+
+
 .list-unstyled {
     @extend %scut-list-unstyled;
     margin: 0;
+}
+
+
+// Author (based off media object)
+// .author {}
+.author__name {
+    display: block;
+    margin-top: rem-calc(3px);
+    line-height: 1.5;
+}
+
+// White round box style
+.round-box {
+    padding: rem-calc(15px 0);
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+
+    &.large {
+        @extend %beta;
+    }
 }

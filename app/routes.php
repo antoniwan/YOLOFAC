@@ -39,6 +39,7 @@ Route::get('logout', function() {
 */
 Route::group(array('prefix' => 'dare'), function(){
     Route::get('create', array('as' => 'dare.create', 'uses' => 'DareController@showDareCreate'));
+    Route::get('/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
 });
 
 

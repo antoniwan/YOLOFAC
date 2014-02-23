@@ -1,0 +1,61 @@
+/**
+ * View: Single Dare
+ */
+
+.dare-single__challenge {
+    @extend %beta;
+    margin: rem-calc(25px 0 0);
+    color: #666;
+
+    &:before { content: '“' }
+    &:after  { content: '”' }
+}
+
+.dare-single__actions {
+    margin: rem-calc(25px -25px);
+    padding: rem-calc(15px 0);
+    background-color: $secondary-color;
+
+    > li {
+        padding-bottom: 0;
+    }
+
+    .button {
+        margin-bottom: 0;
+        strong {
+            display: block;
+        }
+    }
+}
+
+.legit-submissions-group {
+    @extend %scut-list-unstyled;
+    margin: 0;
+}
+
+
+/* Date details side module */
+.dare-details__mod {
+    margin-bottom: rem-calc(20px);
+}
+
+.dare-details__title {
+    display: block;
+    margin-bottom: rem-calc(10px);
+}
+
+/* Donors group */
+.dare-details__donors {
+    @include block-grid($per-row: 5, $spacing: rem-calc(1px));
+    display: inline-block;
+    img {
+        width: 100%;
+    }
+}
+
+/* Donate CTA module */
+.dare-details__donate-cta {
+    input[type="text"] {
+        height: auto;
+    }
+}

@@ -42,6 +42,7 @@
 
         @yield('content')
 
+        <script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
         <script src="{{ asset('js/bundle.js') }}"></script>
         <div id="fb-root"></div>
     </body>
