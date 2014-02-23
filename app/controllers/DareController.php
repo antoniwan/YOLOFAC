@@ -53,8 +53,8 @@ class DareController extends BaseController {
             return Redirect::to('/');
 
         $this->data['dare'] = $dare;
-        $this->data['user'] = User::find($dare->user_id);
-        $this->data['service'] = Service::find($dare->user_id);
+        $this->data['dare']['user'] = User::find($dare->user_id);
+        $this->data['dare']['user']['service'] = Service::find($dare->user_id);
         $this->layout->content = View::make('dare.single', $this->data);
     }
 

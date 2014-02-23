@@ -1,16 +1,15 @@
 @extends('layouts.master');
 
 @section('content')
-    <!--pre><?php var_dump($dare); var_dump($user); var_dump($service); ?></pre-->
     <main class="dare-single page">
         <div class="row">
             <div class="small-12 medium-7 large-8 column">
                 <div class="page__box">
                     <header>
                         <div class="flag flag--top">
-                            <div class="flag__img"><img src="{{ $service->service_picture }}" alt="" width="50" height="50"></div>
+                            <div class="flag__img"><img src="{{ $dare['user']['service']->service_picture }}" alt="" width="50" height="50"></div>
                             <div class="author flag__body">
-                                <strong class="author__name">{{ $user->name }}</strong>
+                                <strong class="author__name">{{ $dare['user']->name }}</strong>
                                 <span class="author__location">Miami, FL</span>
                             </div>
                         </div>
@@ -31,7 +30,7 @@
                     <ul class="dare-single__actions small-block-grid-2">
                         <li>
                             <a class="button radius expand" href="#modal-dare-post" data-reveal-id="modal-dare-post" data-reveal>
-                                <strong>Post your dare video</strong> and make him pay!
+                                <strong>Post your evidence</strong> and make him pay!
                             </a>
                         </li>
                        <li>
