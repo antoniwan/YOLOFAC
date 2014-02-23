@@ -95,6 +95,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->hasMany('Dare');
 	}
 
+    /**
+     * Defines relationship with Response object
+     *
+     * @return Response
+     */
+    public function responses()
+    {
+        return $this->hasManyThrough('YoloResponse', 'Dare');
+    }
+
 	/**
      * Get the unique identifier for the user.
      *

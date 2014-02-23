@@ -17,11 +17,11 @@ class BaseController extends Controller {
             $this->data['locale'] = 'en';
             $this->data['environment'] = App::environment();
 
-            if(Auth::check())
-            {
-                $this->data['user'] = Auth::user();
-                $this->data['user']['service'] = Service::find($this->data['user']->id);
-            }
+            // if(Auth::check())
+            // {
+            //     $this->data['user'] = Auth::user();
+            //     $this->data['user']['service'] = Service::find($this->data['user']->id);
+            // }
 
             $this->layout = View::make($this->layout, $this->data);
         }

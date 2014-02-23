@@ -93,6 +93,7 @@ Route::group(array('prefix' => 'payment'), function(){
 */
 Route::group(array('prefix' => 'response'), function(){
 	Route::post('/submit', 'ResponseController@submit');
+	Route::get('/approve/{id?}', 'ResponseController@approve');
 });
 
 /*
