@@ -28,8 +28,9 @@
                         <p class="milli">Insert your maximum of donation amount</p>
 
                         <div class="dare-config row collapse text-center">
+                            <div class="dollar-helper">$</div>
                             <div class="small-3 column">
-                            {{ Form::text('donation_amount', '1', array('class' => 'big radius js-donation-amount')) }}
+                            {{ Form::text('donation_amount', '1', array('id' => 'donation_amount', 'class' => 'big radius js-donation-amount')) }}
                             {{ Form::label('donation_amount', 'Donation Amount', array('class' => 'milli')) }}
                             </div>
                             <div class="small-1 column">
