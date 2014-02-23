@@ -38,6 +38,7 @@
                     @foreach($dares as $dare)
                     <li>
                         <article class="dare-widget">
+                            @if($dare->medias->count())
                             <figure class="flex-video">
                                 @if($dare->medias->first()->source == 'yolo')
                                     <img src="{{$dare->medias->first()->media_url}}">
@@ -45,6 +46,7 @@
                                     <iframe src="//www.youtube.com/embed/{{Media::getYoutubeEmebbed($dare->medias->first()->media_meta)}}" frameborder="0" allowfullscreen></iframe>
                                 @endif
                             </figure>
+                            @endif
 
                             <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
 
