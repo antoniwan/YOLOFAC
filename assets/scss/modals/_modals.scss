@@ -1,0 +1,29 @@
+/**
+ * Modals
+ */
+
+.modal {
+
+}
+
+.modal__header {
+    padding: rem-calc(15px 25px);
+    background: #f0f0f0;
+}
+
+.modal__row {
+    margin-top: rem-calc(25px);
+    margin-bottom: rem-calc(25px);
+
+    input, .button, .social-group, .btn-social--facebook, .btn-social--twitter {
+        margin-bottom: 0;
+    }
+
+    .valign-bottom {
+        margin-top: rem-calc(15px);
+    }
+}
+
+.modal__line {
+    line-height: rem-calc(50px);
+}
