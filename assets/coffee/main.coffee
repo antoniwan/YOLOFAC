@@ -48,6 +48,7 @@ $(document).ready ->
         e.preventDefault()
 
         $media_url = ($('.js-media-url').val()
+        $media_url = $('.js-media-url').val()
 
         if($media_url != '')
             console.log('lets embed this shit!')
