@@ -35,13 +35,6 @@
 // $column-gutter: rem-calc(30);
 // $total-columns: 12;
 
-// We use these to control various global styles
-$body-bg: #f5efe6;
-$body-font-color: #333;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
-
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
 
@@ -51,12 +44,19 @@ $body-font-color: #333;
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #1abc9c;
+$secondary-color: #bdc3c7;
+$alert-color: #e74c3c;
+$success-color: #2ecc71;
+$warning-color: #f1c40f;
+$info-color: #3498db;
+
+// We use these to control various global styles
+$body-bg: #EDEFF1;
+$body-font-color: #34495e;
+$body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -486,8 +486,8 @@ $body-font-color: #333;
 // $input-font-size: rem-calc(14);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
-// $input-border-color: scale-color(#fff, $lightness: -20%);
-// $input-focus-border-color: scale-color(#fff, $lightness: -40%);
+$input-border-color: $secondary-color;
+$input-focus-border-color: scale-color($secondary-color, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-border-radius: $global-radius;
@@ -882,7 +882,7 @@ $reveal-modal-padding: rem-calc(0);
 // We use these to control the modal border
 // $reveal-border-style: solid;
 // $reveal-border-width: 1px;
-// $reveal-border-color: #666;
+$reveal-border-color: #2f4154;
 
 // $reveal-modal-class: "reveal-modal";
 // $close-reveal-modal-class: "close-reveal-modal";
@@ -1123,11 +1123,11 @@ $reveal-modal-padding: rem-calc(0);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: #2f4154;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: 75px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar

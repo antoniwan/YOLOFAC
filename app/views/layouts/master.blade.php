@@ -21,6 +21,7 @@
         <link rel="home" href="{{ url() }}">
 
         @section('stylesheets')
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,700">
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         @show
 

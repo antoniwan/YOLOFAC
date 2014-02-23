@@ -15,7 +15,6 @@ figure { margin: 0 }
     border-radius: 1000px;
 }
 
-
 .list-unstyled {
     @extend %scut-list-unstyled;
     margin: 0;
@@ -32,8 +31,7 @@ figure { margin: 0 }
 
 // White round box style
 .round-box {
-    padding: rem-calc(15px 0);
-    background: #fff;
+    background: $body-bg;
     border-radius: 5px;
     text-align: center;
 

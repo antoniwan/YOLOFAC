@@ -104,7 +104,7 @@
                         <form class="dare-details__donate-cta">
                             <span class="dare-details__title milli">Insert your donation amount</span>
                             <input class="round-box large" type="text" value="$10">
-                            <input class="button expand" type="submit" value="Donate Now">
+                            <input class="button radius expand" type="submit" value="Donate Now">
                         </form>
                     </div>
                 </div>
