@@ -15,6 +15,7 @@
 
 
                     @foreach($dares as $dare)
+
                     <div class="dashboard__dares">
                         <div class="row collapse">
                             <div class="small-12 medium-6 column vcenter">
@@ -26,7 +27,7 @@
                             <div class="small-12 medium-6 column">
                                 <div class="dare-history flag">
                                     <div class="dare-history__total flag__img">
-                                        <strong>${{$dare->donation_amount}}</strong>
+                                        <strong>${{$dare->getTotalRaised()}}</strong>
                                     </div>
                                     <div class="dare-history__responders flag__body">
                                         <span class="dare-history__responders__amount">{{$dare->responses()->count()}}</span>

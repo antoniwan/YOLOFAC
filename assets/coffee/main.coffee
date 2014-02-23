@@ -1,14 +1,12 @@
 $ = require('jquery')
-stickyPrev = require('./lib/sticky-preview')
+sticky = require('./lib/sticky-preview')
 require('foundation')
 require('foundation.topbar')
 require('foundation.reveal')
 require('jquery.ui.widget')
 require('blueimp.fileupload')
 require('textrotator')
-
 base_url = $('body').data('base')
-
 
 getEmbeddedData = (media_url) ->
 
@@ -31,7 +29,10 @@ getEmbeddedData = (media_url) ->
 class Dare
 
     init: ->
-        stickyPrev()
+        # Sticky elements
+        sticky()
+
+        # Events
         @submitEvents()
 
 

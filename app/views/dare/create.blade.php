@@ -22,30 +22,54 @@
                         <p>Insert your basic dare details. Be creative on your dare but not offensive. Remember it's #YOLOFAC not #DEADat21.</p>
                     </header>
 
-                    {{ Form::open(array('url' => 'dare/submit', 'class' => 'create-dare-form row')) }}
-                    <fieldset class="row collapse">
-                        <h2 class="epsilon">Configure your donation</h2>
+                    {{ Form::open(array('url' => 'dare/submit', 'class' => 'create-dare-form')) }}
+                    <fieldset>
+                        <h2 class="create-dare-form__step epsilon" data-step="1">Configure your donation</h2>
+                        <p class="milli">Insert your maximum of donation amount</p>
 
-                        <div class="small-2 column">
-                        {{ Form::text('donation_amount', '1', array('class' => 'big radius js-donation-amount')) }}
-                        {{ Form::label('donation_amount', 'Donation Amount', array('class' => 'milli')) }}
+                        <div class="dare-config row collapse text-center">
+                            <div class="small-3 column">
+                            {{ Form::text('donation_amount', '1', array('class' => 'big radius js-donation-amount')) }}
+                            {{ Form::label('donation_amount', 'Donation Amount', array('class' => 'milli')) }}
+                            </div>
+                            <div class="small-1 column">
+                                <span class="create-dare-form__mathsymbol" aria-label="times">x</span>
+                            </div>
+                            <div class="small-3 column">
+                            {{ Form::text('donation_quantity', '&infin;', array('class' => 'big radius js-donation-quantity')) }}
+                            {{ Form::label('donation_quantity', 'Maximum Responses', array('class' => 'milli')) }}
+                            </div>
+                            <div class="small-1 column">
+                                <span class="create-dare-form__mathsymbol" aria-label="equals">=</span>
+                            </div>
+                            <div class="small-4 column">
+                            {{ Form::text('donation-total', '?', array('class' => 'big radius js-donation-total')) }}
+                            {{ Form::label('donation-total', 'Maximum Donation', array('class' => 'milli')) }}
+                            </div>
                         </div>
-                        <div class="small-1 column text-center">
-                            <span class="create-dare-form__mathsymbol" aria-label="times">x</span>
-                        </div>
-                        <div class="small-2 column">
-                        {{ Form::text('donation_quantity', '&infin;', array('class' => 'big radius js-donation-quantity')) }}
-                        </div>
-                        <div class="small-1 column text-center">
-                            <span class="create-dare-form__mathsymbol" aria-label="equals">=</span>
-                        </div>
-                        <div class="small-4 column">
-                        {{ Form::text('donation-total', '?', array('class' => 'big radius js-donation-total')) }}
-                        </div>
+
+                        <ul class="dare-charities small-block-grid-4">
+                            <li>
+                                <img class="is-active" src="//placehold.it/50x50" alt="">
+                                <span class="dare-charities__charity-name milli">National Sierra Club</span>
+                            </li>
+                            <li>
+                                <img src="//placehold.it/50x50" alt="">
+                                <span class="dare-charities__charity-name milli">Boys &amp; Girls Club</span>
+                            </li>
+                            <li>
+                                <img src="//placehold.it/50x50" alt="">
+                                <span class="dare-charities__charity-name milli">Take Stock in Children</span>
+                            </li>
+                            <li>
+                                <img src="//placehold.it/50x50" alt="">
+                                <span class="dare-charities__charity-name milli">Big Brothers of Miami</span>
+                            </li>
+                        <ul>
                     </fieldset>
 
                     <fieldset>
-                        <h2 class="epsilon">Create your dare</h2>
+                        <h2 class="create-dare-form__step epsilon" data-step="2">Create your dare</h2>
 
                         {{ Form::text('title', null, array('class' => 'radius', 'placeholder' => 'Insert your dare title&hellip;')) }}
 
@@ -116,12 +140,7 @@
                         <hr>
                         {{ Form::hidden('media-picture', null, array('class' => 'big js-media-picture-url')) }}
 
-                        <div class="show-for-small-only">
-                        {{ Form::submit('Next Step: PayPal details', array('class' => 'button expand')) }}
-                        </div>
-                        <div class="show-for-medium-up">
-                        {{ Form::submit('Next Step: Insert your PayPal details', array('class' => 'button right')) }}
-                        </div>
+                        {{ Form::submit('Confirm your PayPal details', array('class' => 'button expand')) }}
                     </fieldset>
 
                     {{ Form::close() }}
