@@ -61,7 +61,11 @@ Route::group(array('prefix' => 'charities'), function(){
 */
 
 Route::group(array('prefix' => 'api'), function() {
+	Route::get('/', function(){
+		return Response::json(array('you_are_lost' => true));
+	});
 	Route::get('charities/all', 'CharityController@listAll');
+	Route::get('dares/all', 'DareController@listAll');
 });
 
 
