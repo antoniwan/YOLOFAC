@@ -49,6 +49,9 @@ gulp.task 'browserify', ->
                     "foundation.reveal":
                         path: "#{path.bower}/foundation/js/foundation/foundation.reveal.js"
                         exports: null
+                    "foundation.equalizer":
+                        path: "#{path.bower}/foundation/js/foundation/foundation.equalizer.js"
+                        exports: null
                     "jquery.ui.widget":
                         path: "#{path.bower}/blueimp-file-upload/js/vendor/jquery.ui.widget.js"
                         exports: null

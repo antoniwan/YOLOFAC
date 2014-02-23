@@ -33,11 +33,10 @@
             <div class="medium-7 column">
                 <h2 class="delta bold">Latest Dares</h2>
 
-                <ul class="small-block-grid-1 medium-block-grid-2">
-
+                <ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
                     @foreach($dares as $dare)
                     <li>
-                        <article class="dare-widget">
+                        <article class="dare-widget" data-equalizer-watch>
                             @if($dare->medias->count())
                             <figure class="flex-video">
                                 @if($dare->medias->first()->source == 'yolo')
