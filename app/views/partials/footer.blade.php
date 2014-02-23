@@ -1,11 +1,11 @@
 <footer class="footer">
     <div class="footer__stats">
         <aside class="row">
-            <div class="medium-8 column">
+            <div class="small-12 medium-8 column">
                 <h1 class="footer__headline epsilon">88,701 people collected $210,435 by doing silly stuff.</h1>
                 <p class="footer__subheadline epsilon">Start acting stupid, you only live once.</p>
             </div>
-            <div class="medium-4 column">
+            <div class="small-12 medium-4 column">
                 <a class="button radius right" href="{{ route('dare.create') }}">Challenge Accepted!</a>
             </div>
         </aside>

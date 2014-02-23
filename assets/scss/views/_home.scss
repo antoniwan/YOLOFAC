@@ -12,6 +12,13 @@
         padding-top: 0;
         height: rem-calc(400px);
     }
+
+    @media #{$small-only} {
+        .button {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .sub__hero {

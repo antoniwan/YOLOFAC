@@ -15,6 +15,13 @@
     .button {
         margin: rem-calc(0);
     }
+
+    @media #{$small-only} {
+        .button {
+            margin-top: rem-calc(15px);
+            width: 100%;
+        }
+    }
 }
 
 .footer__headline {
@@ -24,7 +31,7 @@
 
 .footer__subheadline {
     margin: 0;
-    color: darken($topbar-bg-color, 10%);
+    color: #798795;
 }
 
 .footer__meta {
