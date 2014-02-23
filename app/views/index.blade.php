@@ -39,7 +39,7 @@
                         <article class="dare-widget">
                             <div data-equalizer-watch>
                                 @if($dare->medias->count())
-                                <figure class="flex-video" data-equalizer-watch>
+                                <figure class="flex-video">
                                     @if($dare->medias->first()->source == 'yolo')
                                         <img src="{{$dare->medias->first()->media_url}}">
                                     @elseif($dare->medias->first()->source == 'youtube')
