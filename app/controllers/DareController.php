@@ -54,6 +54,7 @@ class DareController extends BaseController {
 
         $this->data['dare'] = $dare;
         $this->data['user'] = User::find($dare->user_id);
+        $this->data['service'] = Service::find($dare->user_id);
         $this->layout->content = View::make('dare.single', $this->data);
     }
 

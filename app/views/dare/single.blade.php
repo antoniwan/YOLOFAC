@@ -1,14 +1,14 @@
 @extends('layouts.master');
 
 @section('content')
-    <!--pre><?php var_dump($dare); var_dump($user); ?></pre-->
+    <!--pre><?php var_dump($dare); var_dump($user); var_dump($service); ?></pre-->
     <main class="dare-single page">
         <div class="row">
             <div class="small-12 medium-7 large-8 column">
                 <div class="page__box">
                     <header>
                         <div class="flag flag--top">
-                            <div class="flag__img"><img src="//placehold.it/50x50" alt=""></div>
+                            <div class="flag__img"><img src="{{ $service->service_picture }}" alt="" width="50" height="50"></div>
                             <div class="author flag__body">
                                 <strong class="author__name">{{ $user->name }}</strong>
                                 <span class="author__location">Miami, FL</span>
