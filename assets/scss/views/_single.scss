@@ -20,7 +20,7 @@
 .dare-single__actions {
     margin: rem-calc(25px -25px);
     padding: rem-calc(15px 0);
-    background-color: $secondary-color;
+    border-top: 1px solid $secondary-color;
     border-radius: 0 0 5px 5px;
 
     > li {

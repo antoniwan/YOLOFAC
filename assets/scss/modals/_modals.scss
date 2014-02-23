@@ -3,12 +3,19 @@
  */
 
 .modal {
-
+    border-radius: 5px;
 }
 
 .modal__header {
-    padding: rem-calc(15px 25px);
-    background: #f0f0f0;
+    padding: rem-calc(25px);
+    background: $topbar-bg-color;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+
+    h1 {
+        color: #fff;
+        font-weight: bold;
+    }
 }
 
 .modal__row {
