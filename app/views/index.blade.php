@@ -17,7 +17,7 @@
                             <h1 class="home__hero-heading">You already do crazy,<b>use charity as your excuse!</b></h1>
                             <div class="home__hero-cta row collapse">
                                 <div class="small-12 medium-8 column">
-                                    <p>Supporting charities has never<br /> been this <span id="crazy-fun">refreshing, fun, interesting, insane, edgy, weird, entertaining, viral, social</span></p>
+                                    <p>Supporting charities has never<br /> been this <b id="crazy-fun">refreshing, fun, interesting, insane, edgy, weird, entertaining, viral, social</b></p>
                                 </div>
                                 <div class="small-12 medium-4 column">
                                     <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
