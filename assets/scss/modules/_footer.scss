@@ -1,0 +1,49 @@
+/**
+ * Footer
+ */
+
+.footer {
+    clear: both;
+    margin-top: rem-calc(50px);
+    color: #fff;
+}
+
+.footer__stats {
+    padding: rem-calc(25px 0);
+    background-color: lighten($topbar-bg-color, 7%);
+
+    .button {
+        margin: rem-calc(0);
+    }
+}
+
+.footer__headline {
+    margin: 0;
+    color: #fff;
+}
+
+.footer__subheadline {
+    margin: 0;
+    color: darken($topbar-bg-color, 10%);
+}
+
+.footer__meta {
+    padding: rem-calc(15px 0);
+    background-color: $topbar-bg-color;
+
+    .flag {
+        padding: rem-calc(0 15px);
+    }
+
+    p {
+        margin: 0;
+        color: #798795;
+    }
+}
+
+.logo-secured-paypal {
+    @extend %scut-image-replace;
+    display: block;
+    background-image: url('../img/logo-secured-paypal.png');
+    @include scut-size(159px 55px);
+}
