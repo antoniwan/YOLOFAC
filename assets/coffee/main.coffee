@@ -4,6 +4,7 @@ require('foundation.topbar')
 require('foundation.reveal')
 require('jquery.ui.widget')
 require('blueimp.fileupload')
+require('foundation.reveal')
 
 $(document).ready ->
     $(document).foundation()
