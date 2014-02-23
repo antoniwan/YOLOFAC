@@ -3,7 +3,14 @@
 @section('content')
 
     @if($errors->count())
-    <?php var_dump($errors); ?>
+    <div data-alert class="alert-box warning">
+        <strong>Error!</strong>
+        @foreach ($errors as $error)
+        <?php var_dump($error); ?>
+        {{ 'debug' }}
+        @endforeach
+        <a href="#" class="close">&times;</a>
+    </div>
     @endif
 
     <main class="page">
@@ -11,8 +18,8 @@
             <div class="small-12 medium-7 large-8 column">
                 <div class="page__box">
                     <header>
-                        <h1 class="page__title"><small class="expand">Step 1 of 2:</small> Create your #YOLO dare</h1>
-                        <p>Insert your basic dare details. Be creative on your dare but not offensive. Remember it's #YOLO not #DEADat21.</p>
+                        <h1 class="page__title"><small class="expand">Step 1 of 2:</small> Create your dare</h1>
+                        <p>Insert your basic dare details. Be creative on your dare but not offensive. Remember it's #YOLOFAC not #DEADat21.</p>
                     </header>
 
                     {{ Form::open(array('url' => 'dare/submit', 'class' => 'create-dare-form row')) }}
