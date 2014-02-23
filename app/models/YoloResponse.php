@@ -32,6 +32,9 @@ class YoloResponse extends Eloquent {
         		$response->comments = $response_submission['comments'];
         		$response->video_url = $response_submission['video_url'];
 
+                if(Auth::user())
+                    $response->user_id = Auth::user()->id;
+
         		$dare->responses()->save($response);
         	}
 

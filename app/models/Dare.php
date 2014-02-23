@@ -12,11 +12,10 @@ class Dare extends Eloquent {
      //Validation rules for Dares
     protected static $rules = array(
         'title' => 'required',
-        'description' => 'required',
         'excerpt' => 'required|max:140',
         'donation_amount' => 'required|numeric',
         'donation_quantity' => 'required|numeric',
-        'media-url' => 'url',
+        // 'media-url' => 'url',
         'media-picture' => 'url'
     );
 
@@ -30,7 +29,7 @@ class Dare extends Eloquent {
             $dare = new Dare;
             $dare->title = $dare_submission['title'];
             $dare->excerpt = $dare_submission['excerpt'];
-            $dare->description = $dare_submission['description'];
+            $dare->description = null;
             $dare->donation_amount = $dare_submission['donation_amount'];
             $dare->donation_quantity = $dare_submission['donation_quantity'];
 
