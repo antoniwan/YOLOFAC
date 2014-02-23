@@ -1,0 +1,34 @@
+/**
+ * Flag object
+ */
+
+.flag {
+    display: table;
+    width: 100%;
+}
+
+.flag__img, .flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .flag--top & {
+        vertical-align: top;
+    }
+
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+}
+
+.flag__img {
+    padding-right: rem-calc(15px);
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+}
+
+.flag__body {
+    width: 100%
+}

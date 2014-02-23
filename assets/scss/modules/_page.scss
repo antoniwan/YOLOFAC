@@ -6,6 +6,12 @@
     padding: rem-calc(50px) 0;
 }
 
-.page__tile {
+.page__box, .page__box--dark {
+    padding: rem-calc(25px);
+    background: #fff;
+    border-radius: 10px;
+}
 
+.page__box--dark {
+    background: #f0f0f0;
 }

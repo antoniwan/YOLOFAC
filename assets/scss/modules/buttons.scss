@@ -19,6 +19,17 @@
         content: '';
         @include scut-absolute(0 n 0 0);
     }
+
+    &.is-icon {
+        @include scut-image-replace;
+        @include scut-size(rem-calc(50px 50px));
+
+        &:before {
+            right: 0;
+            width: auto;
+            border-right: none;
+        }
+    }
 }
 
 .btn-social--facebook {

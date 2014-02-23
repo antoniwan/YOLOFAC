@@ -1,0 +1,14 @@
+/**
+ * Media object (image on the side and content beside it)
+ */
+
+.media, .media__bd {
+    @extend %scut-clearfix;
+}
+
+.media__img {
+    float: left;
+    margin-right: rem-calc(15px);
+
+    img { display: block }
+}
