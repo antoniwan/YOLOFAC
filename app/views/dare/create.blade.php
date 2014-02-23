@@ -1,22 +1,16 @@
 @extends('layouts.master');
 
 @section('content')
-
-    @if($errors->count())
-    <?php var_dump($errors); ?>
-    <div data-alert class="alert-box warning">
-        <strong>Error!</strong>
-        @foreach ($errors as $error)
-        <?php var_dump($error); ?>
-        {{ 'debug' }}
-        @endforeach
-        <a href="#" class="close">&times;</a>
-    </div>
-    @endif
-
     <main class="page">
         <div class="dare-create row">
             <div class="small-12 medium-7 large-8 column">
+                @if($errors->count())
+                <div data-alert class="alert-box radius alert">
+                    <strong>Error</strong>
+                    <a href="#" class="close">&times;</a>
+                </div>
+                @endif
+
                 <div class="page__box">
                     <header>
                         <h1 class="page__title"><small class="expand">Step 1 of 2:</small> Create your dare</h1>
@@ -90,15 +84,10 @@
                                     <span class="round">or</span>
                                 </div>
 
-                                <ul class="create-dare-form__media-actions small-block-grid-1 medium-block-grid-2">
-                                    <li class="file-input-replace">
-                                        <a class="button secondary small expand" href="#">Upload a picture</a>
-                                        <input class="button secondary small expand" id="dare-media" type="file" name="files[]" data-url="{{ URL::to('dare/media') }}">
-                                    </li>
-                                    <li>
-                                        <a class="button secondary small expand" href="#">Choose a photo on Facebook</a>
-                                    </li>
-                                </ul>
+                                <div class="create-dare-form__media-actions file-input-replace">
+                                    <a class="button secondary small expand" href="#">Upload a picture</a>
+                                    <input class="button secondary small expand" id="dare-media" type="file" name="files[]" data-url="{{ URL::to('dare/media') }}">
+                                </div>
                             </div>
 
                             <div class="media-submission-upload" style="display:none;">
