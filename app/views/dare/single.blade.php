@@ -30,8 +30,8 @@
 
                     <ul class="dare-single__actions small-block-grid-2">
                         <li>
-                            <a class="button radius expand" href="#">
-                                <strong>Post your dare evidence</strong> and make him pay!
+                            <a class="button radius expand" href="#modal-dare-post" data-reveal-id="modal-dare-post" data-reveal>
+                                <strong>Post your dare video</strong> and make him pay!
                             </a>
                         </li>
                        <li>
@@ -110,4 +110,5 @@
     </main>
 
     @include('modals.challenge-friends')
+    @include('modals.dare-post')
 @show

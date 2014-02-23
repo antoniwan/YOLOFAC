@@ -1,0 +1,16 @@
+/**
+ * Modal: Post a dare
+ */
+
+.dare-post__donation {
+    border-bottom: 1px solid $secondary-color;
+
+    .big {
+        margin-top: rem-calc(10px);
+    }
+}
+
+.dare-post__video-note {
+    display: block;
+    margin-top: rem-calc(15px);
+}
