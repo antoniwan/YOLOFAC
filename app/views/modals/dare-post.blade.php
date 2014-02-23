@@ -1,6 +1,6 @@
 <section id="modal-dare-post" class="modal reveal-modal small" data-reveal>
     <header class="modal__header">
-        <h1 class="zeta">Post your challenge</h1>
+        <h1 class="zeta">Post your challenge response</h1>
     </header>
 
     <div class="modal__content">

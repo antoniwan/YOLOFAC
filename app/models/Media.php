@@ -36,7 +36,10 @@ class Media extends Eloquent {
             $matches
         );
 
-        $id = $matches[1];
+		$id = false;
+
+		if(isset($matches[1]))
+		    $id = $matches[1];
 
         return $id;
 	}

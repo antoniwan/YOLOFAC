@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>You already do crazy, use charity as your excuse with #YOLOFAC!</title>
+    <title>#YOLO for a cause! You already do crazy, use charity as your excuse with #YOLOFAC!</title>
 @stop
 
 @section('content')
@@ -50,7 +50,14 @@
                                     </figure>
                                     @endif
 
-                                    <p class="dare-widget__desc">{{ $dare->excerpt}}</p>
+                                    <p class="dare-widget__desc">I pledge to donate
+                                    <strong>${{ number_format($dare->donation_amount) }}</strong>
+                                    @if($dare->donation_quantity == 1)
+                                    for
+                                    @else
+                                    for each of the first {{ number_format($dare->donation_quantity) }} challengers that
+                                    @endif
+                                    <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong></p>
                                 </div>
 
                                 <footer class="dare-widget__meta flag flag--inverted nano">
@@ -74,12 +81,12 @@
 
                 <article class="dare-widget">
                     <figure class="flex-video">
-                        <iframe src="//www.youtube.com/embed/EdM_u5y5m5A" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="//www.youtube.com/embed/cxuJ2N1rjXA" frameborder="0" allowfullscreen></iframe>
                     </figure>
 
                     <footer class="dare-widget__meta flag milli">
                         <div class="flag__img">
-                            <img src="//placehold.it/50x50" alt="">
+                            <img src="//graph.facebook.com/509630368/picture?width=500&height=500" alt="">
                         </div>
                         <div class="author flag__body">
                             <strong class="author__name">Waldemar Figueroa</strong>
