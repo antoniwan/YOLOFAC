@@ -102,4 +102,22 @@ class DareController extends BaseController {
         );
         return $message;
     }
+
+    public function sendDareEmail()
+    {
+        // get the recipient's email
+        if(!Input::has('email'))
+            return Response::json(array('error' => 'no_target_email'));
+
+        if(!Input::has('dareid'))
+            return Response::json(array('error' => 'no_dare_id'));
+
+        Mail::send('emails.idareyou', array('dare_id' => Input::get('dareid')), function($message)
+        {
+            $message
+                ->to(Input::get('email'))
+                ->subject('Someone has dared you!');
+        });
+        return Response::json(array('success' => 'mail_sent'));
+    }
 }

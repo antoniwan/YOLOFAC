@@ -104,7 +104,6 @@ class Challenge
         # challenge-modal sms cta
         $('#challenge-sms a.button').on('click', (e)=>
             console.log 'click on the twilio share'
-            console.log $('#challenge-sms input')
 
             # empty the cta
             $('#challenge-sms input').fadeOut()
@@ -136,6 +135,32 @@ class Challenge
         # challenge-modal email cta
         $('#challenge-email a.button').on('click', (e) =>
             console.log 'click on the email share'
+            # empty the cta
+            $('#challenge-email input').fadeOut()
+            $('#challenge-email a.button').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
+            # send the SMS text
+            $.ajax 'http://local.yolofac.com/dare/sendDareEmail',
+                type: 'POST'
+                dataType: 'json'
+                data:
+                    email: $('#challenge-email input')[0].value
+                    dareid: $('#challenge-email').data('dareid')
+                success : (data) ->
+                    console.log data
+
+                    if(data.error)
+                        console.log data.error
+                        # reset the CTA and input field
+                        $('#challenge-email input').fadeIn()
+                        $('#challenge-email a.button').empty().html('Send')
+
+                    if(data.success)
+                        $('#challenge-email a.button').empty().html('E-mail Sent Successfuly!')
+
+                error: (e) ->
+                    console.log e
+                    $('#challenge-email input').fadeIn()
+                    $('#challenge-email a.button').empty().html('Send')
         )
 
 

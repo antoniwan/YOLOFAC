@@ -47,8 +47,11 @@ Route::group(array('prefix' => 'dare'), function(){
     Route::get('show/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
     Route::get('test', 'DareController@test_media');
 
-    // twilio stuff
+    // send twilio SMS
     Route::post('sendSMS', array('as' => 'dare.send_sms', 'uses' => 'DareController@sendSMS'));
+
+    // send sendgrid dare email
+    Route::post('sendDareEmail', array('as' => 'dare.send_email', 'uses' => 'DareController@sendDareEmail'));
 });
 
 

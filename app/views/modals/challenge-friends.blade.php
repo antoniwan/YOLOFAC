@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div id="challenge-email" class="modal__row row">
+        <div id="challenge-email" class="modal__row row" data-dareid="{{ $dare->id }}">
             <div class="medium-7 column">
                 <label for="challenge-email">Challenge a friend with an email</label>
                 <input type="text" id="challenge-email" placeholder="Insert your friend's email address">

@@ -5,6 +5,6 @@
 @stop
 
 @section('content')
-    <h2>{{'[name]'}} has dared you!</h2>
-    <p>Find out what's going on <a href="#">here</a>.</p>
+    <h2>Someone has dared you!</h2>
+    <p>Find out what's going on <a href="#{}?{{ $dare_id }}">here</a>.</p>
 @stop
