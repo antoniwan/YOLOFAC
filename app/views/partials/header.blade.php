@@ -2,7 +2,7 @@
   <header class="header top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
-        <h1><a href="{{ route('home') }}">#YOLO for a cause</a></h1>
+        <h1><a href="{{ route('home') }}">#YOLO for a Cause</a></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
     </ul>
