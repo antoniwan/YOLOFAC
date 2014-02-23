@@ -11,11 +11,11 @@
                 <div class="small-12 column">
                     <div class="flag flag--bottom flag--no-small">
                         <div class="flag__body">
-                            <h1 class="home__hero-heading">People do crazy already, <b>let's back it up for good!</b></h1>
+                            <h1 class="home__hero-heading">You already do crazy<b>use charity as your excuse</b></h1>
 
                             <div class="home__hero-cta row collapse">
                                 <div class="small-12 medium-8 column">
-                                    <p>Pledge to support a charity everytime a friend does a crazy stunt.</p>
+                                    <p>Supporting charities has never<br /> been this <span id="crazy-fun">refreshing, fun, interesting, insane, edgy, weird, entertaining, viral, social</span></p>
                                 </div>
                                 <div class="small-12 medium-4 column">
                                     <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
