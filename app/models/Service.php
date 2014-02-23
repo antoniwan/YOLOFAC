@@ -112,22 +112,6 @@ class Service extends Eloquent {
 
 				break;
 
-			case 'paypal':
-				$result = json_decode($service->request('/identity/openidconnect/userinfo/?schema=openid'), true);
-				echo "<pre>";
-				var_dump($result);
-				echo "</pre>";
-
-				// $user = array(
-    //                 'service_name' => 'twitter',
-    //                 'service_id' => $result->id,
-    //                 'user_name' => $result->name,
-    //                 'service_picture' => str_replace("_normal", "", $result->profile_image_url),
-    //                 'user_email' => null
-    //             );
-
-				break;
-
 			default:
 				$user = null;
 				break;

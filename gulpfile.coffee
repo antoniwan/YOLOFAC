@@ -46,6 +46,12 @@ gulp.task 'browserify', ->
                     "foundation.topbar":
                         path: "#{path.bower}/foundation/js/foundation/foundation.topbar.js"
                         exports: null
+                    "jquery.ui.widget":
+                        path: "#{path.bower}/blueimp-file-upload/js/vendor/jquery.ui.widget.js"
+                        exports: null
+                    "blueimp.fileupload":
+                        path: "#{path.bower}/blueimp-file-upload/js/jquery.fileupload.js"
+                        exports: null
             )
         )
 

@@ -38,6 +38,9 @@ Route::get('logout', function() {
 |
 */
 Route::group(array('prefix' => 'dare'), function(){
+	Route::get('create', array('before' => 'auth', 'as' => 'dare.create', 'uses' => 'DareController@showDareCreate'));
+    Route::post('submit', array('before' => 'auth', 'uses' => 'DareController@submitDare'));
+    Route::post('media', 'DareController@media');
     Route::get('create', array('as' => 'dare.create', 'uses' => 'DareController@showDareCreate'));
     Route::get('/{id?}', array('as' => 'dare.single', 'uses' => 'DareController@showDare'));
 });

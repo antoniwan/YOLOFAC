@@ -65,6 +65,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 }
 
         	}
+
+            Session::put('register', true);
         }
 
     	Auth::login($user);

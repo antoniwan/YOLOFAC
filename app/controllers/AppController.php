@@ -40,8 +40,11 @@ class AppController extends BaseController {
 	{
 		$user = Service::serviceCallback();
 
-		if($user && Auth::check())
-			return Redirect::to('/user');
+		if($user && Auth::check() && Session::get('register')){
+			Session::forget('register');
+			return Redirect::to('/dare/create');
+		} else if($user && Auth::check())
+			return Redirect::to('/');
 	}
 
 	public function twilioTest()
