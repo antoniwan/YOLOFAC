@@ -103,7 +103,11 @@ class Payment extends Eloquent {
         $dbpayment = new Payment;
         $dbpayment->authorization_id = $authorizationId;
 
-        $dare->payments()->save($dbpayment);
+        if($dare->payments()->save($dbpayment))
+            return true;
+        else
+            return false;
+
     }
 
     public static function cancelledPayment()

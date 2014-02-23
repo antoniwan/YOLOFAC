@@ -30,6 +30,4 @@ class Media extends Eloquent {
 		return $this->belongsTo('Dare');
 	}
 
-
-
 }
