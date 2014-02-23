@@ -163,6 +163,34 @@ class Challenge
                     $('#challenge-email a.button').empty().html('Send')
         )
 
+        # challenge-modal friend invite cta
+        $('#challenge-fbinvite a').on('click', (e) =>
+            console.log 'click on the fbinvite share'
+            $('#challenge-fbinvite a').empty().html('<img src="//local.yolofac.com/img/challenge/ajax-loader-darkbg.gif" alt="">')
+            FB.ui
+              method: "feed"
+              name: "The Facebook SDK for Javascript"
+              caption: "Bringing Facebook to the desktop and mobile web"
+              description: ("A small JavaScript library that allows you to harness " + "the power of Facebook, bringing the user's identity, " + "social graph and distribution power to your site.")
+              link: "https://developers.facebook.com/docs/reference/javascript/"
+              picture: "http://www.fbrell.com/public/f8.jpg"
+            , (response) ->
+              if response and response.post_id
+                console.log "Post was published."
+              else
+                console.log "Post was not published."
+        )
+
+        # challenge-modal twitter cta
+        $('#challenge-tweet a').on('click', (e) =>
+            console.log 'click on the twitter share cta'
+        )
+
+        # challenge-modal fbshare cta
+        $('#challenge-fbshare a').on('click', (e) =>
+            console.log 'click on the fbshare cta'
+        )
+
 
 
 $(document).ready ->

@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="modal__row row">
+        <div id="challenge-fbinvite" class="modal__row row">
             <div class="medium-7 column">
                 <span class="modal__line">Challenge a friend on Facebook</span>
             </div>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="modal__row row">
+        <div id="challenge-tweet" class="modal__row row">
             <div class="medium-7 column">
                 <span class="modal__line">Challenge a friend on Twitter</span>
             </div>
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="modal__row row">
+        <div id="challenge-fbshare" class="modal__row row">
             <div class="medium-7 column">
                 <span class="modal__line">Share this challenge</span>
             </div>
