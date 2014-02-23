@@ -163,7 +163,7 @@ class Challenge
     init: ->
         @modalEvents()
     modalEvents: ->
-        console.log 'modal events loaded'
+        # console.log 'modal events loaded'
 
         # challenge-modal sms cta
         $('#challenge-sms a.button').on('click', (e)=>

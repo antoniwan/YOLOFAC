@@ -44,6 +44,7 @@
         @yield('content')
 
         <script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        <script src="//platform.twitter.com/widgets.js"></script>
         <script src="{{ asset('js/bundle.js') }}"></script>
         <div id="fb-root"></div>
     </body>

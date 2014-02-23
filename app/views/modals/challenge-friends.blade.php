@@ -48,8 +48,9 @@
             <div class="medium-5 column">
                 <ul class="shares-group button-group expand">
                     <li><a class="button btn-social--facebook is-icon" href="#">Facebook</a></li>
-                    <li><a class="button btn-social--twitter is-icon" href="#">Twitter</a></li>
-                    <li><a class="button btn-social--google is-icon" href="#">Google</a></li>
+                    <li><a class="button btn-social--twitter is-icon" href="https://twitter.com/intent/tweet?text={{urlencode('I dare you to do something crazy! Help me support a local non-profit by doing a crazy stunt.
+#YOLOFAC')}}">Twitter</a></li>
+                    <li><a class="button btn-social--google is-icon" href="">Google</a></li>
                 </ul>
             </div>
         </div>
