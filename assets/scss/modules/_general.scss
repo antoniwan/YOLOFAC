@@ -9,6 +9,11 @@ figure { margin: 0 }
 // Helpers
 .expand {
     display: block;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .round {
@@ -25,7 +30,6 @@ figure { margin: 0 }
 // .author {}
 .author__name {
     display: block;
-    margin-top: rem-calc(3px);
     line-height: 1.5;
 }
 

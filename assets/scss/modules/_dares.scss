@@ -1,0 +1,26 @@
+/**
+ * Dare widgets (boxes)
+ */
+
+.dare-widget {
+    background: #fff;
+    border-radius: 5px;
+
+    .flex-video { margin: 0; }
+}
+
+.dare-widget__desc {
+    @extend %milli;
+    margin: 0;
+    padding: rem-calc(25px);
+}
+
+.dare-widget__meta {
+    padding: rem-calc(10px 25px);
+    border-top: 1px solid $secondary-color;
+    color: #666;
+
+    span {
+        display: block;
+    }
+}
