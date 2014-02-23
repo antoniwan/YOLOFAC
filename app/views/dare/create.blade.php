@@ -19,23 +19,22 @@
                     <h2>Choose your donation pledge</h2>
 
                     {{ Form::open(array('url' => 'dare/submit', 'class' => 'create-dare-form row')) }}
-
                     <fieldset class="row collapse">
                         <div class="small-2 column">
-                        {{ Form::text('donation_amount', '1', array('class' => 'big')) }}
+                        {{ Form::text('donation_amount', '1', array('class' => 'big js-donation-amount')) }}
                         {{ Form::label('donation_amount', 'Donation Amount', array('class' => 'milli')) }}
                         </div>
                         <div class="small-2 column text-center">
                             <span class="create-dare-form__mathsymbol" aria-label="times">x</span>
                         </div>
                         <div class="small-2 column">
-                        {{ Form::text('donation_quantity', '&infin;', array('class' => 'big')) }}
+                        {{ Form::text('donation_quantity', '&infin;', array('class' => 'big js-donation-quantity')) }}
                         </div>
                         <div class="small-2 column text-center">
                             <span class="create-dare-form__mathsymbol" aria-label="equals">=</span>
                         </div>
                         <div class="small-4 column">
-                        {{ Form::text('donation-total', '?', array('class' => 'big')) }}
+                        {{ Form::text('donation-total', '?', array('class' => 'big js-donation-total')) }}
                         </div>
                     </fieldset>
 
@@ -54,44 +53,46 @@
                     <fieldset>
 
                         <div class="media-submission-fieldset">
-                            <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>
+                            <div class="create-date-form__media-submit">
+                                <h3 class="create-dare-form__headline">Insert an example of your dare <small class="end zeta">(Optional)</small></h3>
 
-                            {{ Form::text('media-url', null, array('class' => 'js-media-url', 'placeholder' => 'Insert a video example&hellip;')) }}
-                            <a href="#" class="js-embed-media button small">insert</a>
-                            <div class="text-center milli">
-                                You can insert links to videos from YouTube, Vine or Instragram.
+                                {{ Form::text('media-url', null, array('class' => 'js-media-url', 'placeholder' => 'Insert a video example&hellip;')) }}
+                                <a href="#" class="js-embed-media button small">insert</a>
+                                <div class="text-center milli">
+                                    You can insert links to videos from YouTube, Vine or Instragram.
+                                </div>
+
+                                <div class="create-dare-form__media-divider">
+                                    <span>or</span>
+                                </div>
+
+                                <ul class="small-block-grid-2">
+                                    <input class="button small expand" id="dare-media" type="file" name="files[]" data-url="{{ URL::to('dare/media') }}">
+                                    <li><a class="button small expand" href="#">Choose a photo on Facebook</a></li>
+                                </ul>
                             </div>
 
-                            <div class="create-dare-form__media-divider">
-                                <span>or</span>
+                            <div class="media-submission-upload" style="display:none;">
+                                <div class="progress round">
+                                  <span class="meter" style="width: 0"></span>
+                                </div>
                             </div>
 
-                            <div class="create-dare-form__media-preview">
+                            <div class="create-dare-form__media-preview" style="display:none;">
                                 <div class="flag">
                                     <div class="flag__img">
                                         <img src="//placehold.it/100x100" alt="">
                                     </div>
                                     <div class="flag__body">
                                         picture_file_name.jpg
-
                                         <a href="#" class="js-media-cancel" aria-label="Cancel">x</a>
                                     </div>
                                 </div>
                             </div>
-
-                            <ul class="small-block-grid-2">
-                                <input class="button small expand" id="dare-media" type="file" name="files[]" data-url="{{ URL::to('dare/media') }}">
-                                <li><a class="button small expand" href="#">Choose a photo on Facebook</a></li>
-                            </ul>
-                        </div>
-                        <div class="media-submission-upload" style="display:none;">
-                            <div class="progress round">
-                              <span class="meter" style="width: 0"></span>
-                            </div>
                         </div>
 
                         <hr>
-
+                        {{ Form::hidden('media-picture', null, array('class' => 'big js-media-picture-url')) }}
                         {{ Form::submit('Next Step: Insert your PayPal details', array('class' => 'button right')) }}
                     </fieldset>
 

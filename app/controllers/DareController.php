@@ -42,6 +42,17 @@ class DareController extends BaseController {
 
     }
 
+    public function getInstagram()
+    {
+        if(Input::has('media_url')){
+            $contents = file_get_contents('http://api.instagram.com/oembed?url=' . Input::get('media_url'));
+
+            if($contents != 'No Media Match')
+                return Response::json(json_decode($contents));
+        }
+
+        return Response::json(false);
+    }
 
     public function showDare($dareId = null)
     {
