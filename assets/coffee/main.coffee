@@ -54,11 +54,11 @@ class Dare
                 #   uploadErrors.push('Filesize is too big.')
 
                 if uploadErrors.length <= 0
-                    $('.media-submission-fieldset').hide()
+                    $('.create-date-form__media-submit').hide()
                     $('.media-submission-upload').show()
                     data.submit()
                 else
-                    $('.media-submission-fieldset').show()
+                    $('.create-date-form__media-submit').show()
                     $('.media-submission-upload').hide()
 
             progress: (e, data) ->
@@ -68,14 +68,19 @@ class Dare
                 )
 
             fail: (e, data) ->
-                $('.media-submission-fieldset').show()
+                $('.create-date-form__media-submit').show()
                 $('.media-submission-upload').hide()
 
 
             done: (e, data) ->
-                $('.media-submission-fieldset').hide()
-                $('.media-submission-upload').show().html('<img src="' + data.result.files[0].thumbnailUrl + '">')
+                $('.create-date-form__media-submit').hide()
+                $('.flag__img img').attr('src', data.result.files[0].thumbnailUrl)
+                $('.media-submission-upload').hide()
+                $('.create-dare-form__media-preview').show()
+                console.log(data.result.files[0])
+                $('.js-media-picture-url').val(data.result.files[0].url)
         )
+
         $('.js-embed-media').on('click', (e) =>
             e.preventDefault()
 

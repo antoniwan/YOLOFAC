@@ -17,6 +17,7 @@ class Dare extends Eloquent {
         'donation_amount' => 'required|numeric',
         'donation_quantity' => 'required|numeric',
         'media-url' => 'url',
+        'media-picture' => 'url'
     );
 
     public static function validate($dare_submission)
@@ -33,10 +34,22 @@ class Dare extends Eloquent {
             $dare->donation_amount = $dare_submission['donation_amount'];
             $dare->donation_quantity = $dare_submission['donation_quantity'];
 
-            if(isset($dare_submission['media-url']))
-                $dare->embedded = Media::getEmbeddedData($dare_submission['media-url']);
-
             Auth::user()->dares()->save($dare);
+
+            if(isset($dare_submission['media-url']) && $dare_submission['media-url']){
+                $media = new Media;
+                $media->media_meta = Media::getEmbeddedData($dare_submission['media-url']);
+
+                $dare->medias()->save($media);
+            }
+
+
+            if(isset($dare_submission['media-picture']) && $dare_submission['media-picture']){
+                $media = new Media;
+                $media->media_url = $dare_submission['media-picture'];
+
+                $dare->medias()->save($media);
+            }
 
             return $dare->id;
         }
