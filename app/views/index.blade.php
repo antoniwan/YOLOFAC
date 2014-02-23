@@ -8,20 +8,22 @@
     <main class="home">
         <header class="home__hero">
             <div class="row">
-                <div class="flag flag--bottom">
-                    <div class="flag__img">
-                        <div class="home__hero-img" role="presentation"></div>
-                    </div>
-                    <div class="flag__body">
-                        <h1 class="home__hero-heading">People do crazy already, <b>let's back it up for good!</b></h1>
+                <div class="small-12 column">
+                    <div class="flag flag--bottom flag--no-small">
+                        <div class="flag__body">
+                            <h1 class="home__hero-heading">People do crazy already, <b>let's back it up for good!</b></h1>
 
-                        <div class="home__hero-cta row collapse">
-                            <div class="small-12 medium-8 column">
-                                <p>Pledge to support a charity everytime a friend does a crazy stunt.</p>
+                            <div class="home__hero-cta row collapse">
+                                <div class="small-12 medium-8 column">
+                                    <p>Pledge to support a charity everytime a friend does a crazy stunt.</p>
+                                </div>
+                                <div class="small-12 medium-4 column">
+                                    <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
+                                </div>
                             </div>
-                            <div class="small-12 medium-4 column">
-                                <a class="button radius small" href="{{URL::to('/dare/create')}}">Create a dare</a>
-                            </div>
+                        </div>
+                        <div class="flag__img show-for-medium-up">
+                            <div class="home__hero-img" role="presentation"></div>
                         </div>
                     </div>
                 </div>
@@ -57,7 +59,7 @@
                 </ul>
             </div>
 
-            <div class="medium-4 column last">
+            <div class="medium-4 column last show-for-medium-up">
                 <h2 class="epsilon bold">Staff Pick</h2>
 
                 <article class="dare-widget">

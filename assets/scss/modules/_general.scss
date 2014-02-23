@@ -39,6 +39,10 @@ figure { margin: 0 }
 .vcenter {
     @include scut-vcenter-td('.vcenter-inner');
 }
+.vcenter--ib {
+    @include scut-vcenter-ib('.vcenter-inner');
+}
+
 
 // Author (based off media object)
 // .author {}

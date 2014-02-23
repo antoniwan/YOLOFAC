@@ -3,13 +3,16 @@
  */
 
 .dare-create {
-    .page__box {
-        padding: rem-calc(25px 50px);
-    }
-
     .page__title {
         line-height: 1.5;
 
         .expand { line-height: 1 }
+    }
+
+    @media #{$medium-up} {
+
+        .page__box {
+            padding: rem-calc(25px 50px);
+        }
     }
 }

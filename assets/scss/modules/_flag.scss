@@ -7,6 +7,12 @@
     width: 100%;
 }
 
+.flag--no-small {
+    @media #{$small-only} {
+        display: inherit;
+    }
+}
+
 .flag__img, .flag__body {
     display: table-cell;
     vertical-align: middle;
@@ -17,6 +23,10 @@
 
     .flag--bottom & {
         vertical-align: bottom;
+    }
+
+    .flag--no-small & {
+        display: inherit;
     }
 }
 
@@ -31,6 +41,12 @@
     > img {
         display: block;
         max-width: none;
+    }
+
+    .flag--no-small {
+        @media #{$small-only} {
+            padding-right: 0;
+        }
     }
 }
 

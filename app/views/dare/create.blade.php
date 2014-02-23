@@ -108,7 +108,13 @@
 
                         <hr>
                         {{ Form::hidden('media-picture', null, array('class' => 'big js-media-picture-url')) }}
+
+                        <div class="show-for-small-only">
+                        {{ Form::submit('Next Step: PayPal details', array('class' => 'button expand')) }}
+                        </div>
+                        <div class="show-for-medium-up">
                         {{ Form::submit('Next Step: Insert your PayPal details', array('class' => 'button right')) }}
+                        </div>
                     </fieldset>
 
                     {{ Form::close() }}

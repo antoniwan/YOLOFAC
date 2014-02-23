@@ -12,7 +12,11 @@
       <ul class="right">
         <!-- user is logged-in -->
         @if(!Auth::check())
-        <li class="has-form"><a class="button round" href="{{ route('register') }}">Sign In</a></li>
+        <li class="has-form vcenter--ib">
+            <div class="vcenter-inner">
+                <a class="button radius expand" href="{{ route('register') }}">Sign In</a>
+            </div>
+        </li>
         @else
         <li class="auth-controls has-dropdown">
             <a href="#">

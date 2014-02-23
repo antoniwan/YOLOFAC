@@ -3,11 +3,21 @@
  */
 
 .header {
+    .button {
+        position: static;
+        color: #fff;
+        width: rem-calc(75px);
+    }
 
+    @media #{$small-only} {
+        .button {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .auth-controls {
-
 }
 
 .auth-controls__profile-pic {
