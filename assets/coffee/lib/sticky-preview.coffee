@@ -3,5 +3,6 @@ require('sticky-kit')
 
 module.exports = ->
     $(document).ready ->
-        $('.js-sticky').stick_in_parent
-            offset_top: 100
+        if matchMedia(Foundation.media_queries['large'].matches)
+            $('.js-sticky').stick_in_parent
+                offset_top: 100
