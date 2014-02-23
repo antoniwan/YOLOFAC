@@ -3,6 +3,7 @@
 @section('content')
 
     @if($errors->count())
+    <?php var_dump($errors); ?>
     <div data-alert class="alert-box warning">
         <strong>Error!</strong>
         @foreach ($errors as $error)

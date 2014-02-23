@@ -29,7 +29,6 @@ class Dare extends Eloquent {
             $dare = new Dare;
             $dare->title = $dare_submission['title'];
             $dare->excerpt = $dare_submission['excerpt'];
-            $dare->description = null;
             $dare->donation_amount = $dare_submission['donation_amount'];
             $dare->donation_quantity = $dare_submission['donation_quantity'];
 
@@ -38,7 +37,7 @@ class Dare extends Eloquent {
             if(isset($dare_submission['media-url']) && $dare_submission['media-url']){
                 $media = new Media;
                 $media->media_meta = Media::getEmbeddedData($dare_submission['media-url']);
-
+                $media->source = 'youtube';
                 $dare->medias()->save($media);
             }
 
@@ -57,7 +56,7 @@ class Dare extends Eloquent {
     public function getTotalRaised()
     {
         if( $total_responses = $this->responses()->where('accepted', 1)->count())
-            $total_responses * $this->donation_amount;
+            $total_responses = $total_responses * $this->donation_amount;
 
         return $total_responses;
 
