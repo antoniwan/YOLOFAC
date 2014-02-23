@@ -98,7 +98,6 @@ gulp.task 'sass', ->
     if gulputil.env.production
         stream = stream
             .pipe(plumber())
-            .pipe(csso())
             .pipe(gulp.dest("#{path.dist}/#{path.css}"))
 
 # Browser Sync
@@ -131,7 +130,6 @@ gulp.task 'init', ->
 # Deployment task
 gulp.task 'force-env', -> gulputil.env.production = true
 gulp.task 'default', [
-    'coffeelint'
     'browserify'
     'sass'
 ]

@@ -16,6 +16,7 @@
 .dare-history__total {
     @extend %epsilon;
     padding: rem-calc(0 10px);
+    width: 50%;
     background: $topbar-bg-color;
     border-radius: 3px 0 0 3px;
     color: #fff;

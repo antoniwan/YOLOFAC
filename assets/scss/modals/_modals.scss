@@ -3,8 +3,8 @@
  */
 
 .modal {
+    position: fixed;
     border-radius: 5px;
-
     @media #{$small-only} {
         margin-top: rem-calc(-28px);
         margin-left: -47.5%;

@@ -82,7 +82,6 @@
                     <figure class="flex-video">
                         <iframe src="//www.youtube.com/embed/cxuJ2N1rjXA" frameborder="0" allowfullscreen></iframe>
                     </figure>
-
                     <footer class="dare-widget__meta flag milli">
                         <div class="flag__img">
                             <img src="//graph.facebook.com/509630368/picture?width=500&height=500" alt="">

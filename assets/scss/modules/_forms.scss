@@ -22,3 +22,7 @@ textarea {
         @include scut-absolute(0 0 0 0);
     }
 }
+
+.button.postfix {
+    line-height: rem-calc(43px);
+}

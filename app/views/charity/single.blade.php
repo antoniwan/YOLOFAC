@@ -30,14 +30,7 @@
                             <span class="dare-details__title">Dares</span>
                             <div class="round-box large">
                                 @if($charity->responses()->count())
-                                    <b>{{ $charity->responses()->count() }}</b>
-                                    <ul class="dare-details__donors">
-                                        <li><img src="//placehold.it/30x30"></li>
-                                        <li><img src="//placehold.it/30x30"></li>
-                                        <li><img src="//placehold.it/30x30"></li>
-                                        <li><img src="//placehold.it/30x30"></li>
-                                        <li><img src="//placehold.it/30x30"></li>
-                                    </ul>
+                                    <b>{{ $charity->responses()->count() }} responders</b>
                                 @endif
                             </div>
                         </li>
