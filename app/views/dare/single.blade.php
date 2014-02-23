@@ -17,11 +17,11 @@
 
                         <h2 class="dare-single__challenge">
                             I pledge to donate
-                            <strong>${{ $dare->donation_amount }}</strong>
+                            <strong>${{ number_format($dare->donation_amount) }}</strong>
                             @if($dare->donation_quantity == 1)
                             for
                             @else
-                            for each of the first {{ $dare->donation_quantity }} challengers that
+                            for each of the first {{ number_format($dare->donation_quantity) }} challengers that
                             @endif
                             <strong>{{ str_replace(array("."), "", strtolower($dare->title)) }}</strong>
                             to <strong>[charity name]</strong>.
@@ -36,7 +36,7 @@
                         </li>
                        <li>
                             <a class="button radius expand" href="#modal-challenge-friends" data-reveal-id="modal-challenge-friends" data-reveal>
-                                <strong>Dare a friend</strong> to create a video!
+                                <strong>Dare a friend</strong> to DO IT!
                             </a>
                         </li>
                     </ul>
