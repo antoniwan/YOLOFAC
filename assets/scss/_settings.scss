@@ -53,13 +53,13 @@ $info-color: #3498db;
 
 // We use these to control various global styles
 $body-bg: #EDEFF1;
-$body-font-color: #34495e;
+$body-font-color: #7F8C9A;
 $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 5px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -116,7 +116,7 @@ $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 // $header-font-family: $body-font-family;
 // $header-font-weight: 300;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #2f4154;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -179,10 +179,10 @@ $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 // $definition-list-margin-bottom: rem-calc(12);
 
 // We use these to style blockquotes
-// $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
-// $blockquote-border: 1px solid #ddd;
-// $blockquote-cite-font-size: rem-calc(13);
+$blockquote-font-color: scale-color($body-font-color, $lightness: 35%);
+$blockquote-padding: 0;
+$blockquote-border: 0;
+$blockquote-cite-font-size: rem-calc(14);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
@@ -472,7 +472,7 @@ $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: rem-calc(20);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
@@ -486,20 +486,20 @@ $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 // $input-font-size: rem-calc(14);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
-$input-border-color: $secondary-color;
-$input-focus-border-color: scale-color($secondary-color, $lightness: -40%);
+$input-border-color: #f2f2f2;
+$input-focus-border-color: scale-color($input-border-color, $lightness: -20%);
 // $input-border-style: solid;
-// $input-border-width: 1px;
+$input-border-width: 2px;
 // $input-border-radius: $global-radius;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-// $input-include-glowing-effect: true;
+$input-box-shadow: none;
+$input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
+$fieldset-border-width: 0;
 // $fieldset-border-color: #ddd;
-// $fieldset-padding: rem-calc(20);
+$fieldset-padding: rem-calc(0 15px);
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them

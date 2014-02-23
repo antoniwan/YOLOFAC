@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "scut": "~0.9.1",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "sticky-kit": "~1.0.3"
   }
 }

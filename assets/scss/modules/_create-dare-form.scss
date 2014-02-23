@@ -3,7 +3,12 @@
  */
 
 .create-dare-form {
-
+    fieldset {
+        margin-bottom: rem-calc(50px) !important;
+    }
+    fieldset:last-child {
+        margin-bottom: 0 !important;
+    }
 }
 
 .create-dare-form__mathsymbol {
@@ -13,7 +18,7 @@
 }
 
 .create-dare-form__headline {
-    @extend %zeta;
+    @extend %milli;
 
     small {
         @extend %zeta;
@@ -24,18 +29,37 @@
 
 .create-dare-form__media-divider {
     position: relative;
-    margin: rem-calc(30px 0);
-    border-top: 1px solid #ccc;
+    margin: rem-calc(50px 0);
+    border-top: 1px solid $secondary-color;
     line-height: 0;
 
-    span {
+    .round {
         display: block;
         background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 250px;
+        border: 1px solid $secondary-color;
         font-size: rem-calc(14px);
-        line-height: rem-calc(25px);
+        line-height: rem-calc(22px);
         text-align: center;
         @include scut-center-absolutely(rem-calc(25px 25px));
+    }
+}
+
+.create-dare-form__media-actions {
+    .button {
+        margin-bottom: 0;
+    }
+}
+
+.dare-preview {
+    position: relative;
+    padding: rem-calc(25px);
+    background: #fff;
+    border-radius: 7px;
+    font-size: rem-calc(14px);
+
+    .author__name {
+        font-style: normal;
+
+        &:before { display: none; }
     }
 }
