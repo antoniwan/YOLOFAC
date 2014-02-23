@@ -12,12 +12,16 @@
         @show
 
         @section('meta')
-        <meta name="description" content="{{ trans('app.og.description') }}">
+        <meta name="description" content="You already do crazy, use charity as your excuse! Supporting charities has never been this fun.">
         <meta name="keywords" content="{{ trans('app.meta.keywords.home') }}">
         <meta name="robots" content="index, follow, nosnippet">
         @show
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="">
+        <meta name="author" content="Team One Beard Down">
+        <meta name="og:title" content="#YOLO for a Cause">
+        <meta name="og:description" content="You already do crazy, use charity as your excuse! Supporting charities has never been this fun.">
+        <meta name="og:type" content="website">
+        <meta name="og:author" content="Team">
         <link rel="home" href="{{ url() }}">
 
         @section('stylesheets')
@@ -25,14 +29,6 @@
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         @show
 
-        <meta property="og:type" content="website">
-        @section('og-tags')
-        <meta property="og:title" content="">
-        <meta property="og:description" content="">
-        <meta property="og:image" content="">
-        <meta property="og:url" content="">
-        @show
-        <meta property="og:admins" content="">
 
         @section('scripts')
         <script src="{{ asset('js/vendor/modernizr.js') }}"></script>
